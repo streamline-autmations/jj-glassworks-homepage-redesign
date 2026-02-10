@@ -1,15 +1,8 @@
-import { Building2, Factory, Home } from "lucide-react";
 import Image from "next/image";
-
-const highlights = [
-  { icon: Building2, text: "Established since 1988" },
-  { icon: Factory, text: "In-house cutting & fabrication" },
-  { icon: Home, text: "Residential + commercial projects" },
-];
 
 export default function AboutHero() {
   return (
-    <section className="relative overflow-hidden pt-32 pb-16 md:pt-40 md:pb-20 bg-secondary">
+    <section className="relative overflow-hidden pt-24 pb-10 md:pt-28 md:pb-12 bg-secondary">
       <Image
         src="https://res.cloudinary.com/dnlgohkcc/image/upload/v1770742920/Untitled_design_58_gqd5lh.png"
         alt=""
@@ -18,36 +11,18 @@ export default function AboutHero() {
         className="object-cover"
         sizes="100vw"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--background)/0.90)] via-[hsl(var(--background)/0.80)] to-[hsl(var(--background)/1)]" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-4">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)] mb-4">
             Who We Are
           </p>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-[1.1] mb-5">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)] leading-[1.1] mb-5">
             About JJ Glassworks
           </h1>
-          <p className="text-muted-foreground text-base sm:text-lg leading-relaxed max-w-xl">
+          <p className="text-white/85 drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)] text-base sm:text-lg leading-relaxed max-w-xl">
             Glass & aluminium specialists serving Meyerton and greater Gauteng.
           </p>
-        </div>
-
-        <div className="mt-12 flex flex-col sm:flex-row gap-4">
-          {highlights.map((item) => {
-            const Icon = item.icon;
-            return (
-              <div
-                key={item.text}
-                className="flex items-center gap-3 rounded-2xl bg-background/80 backdrop-blur-sm px-5 py-3.5 shadow-sm ring-1 ring-border/60"
-              >
-                <Icon className="h-4 w-4 text-primary flex-shrink-0" />
-                <span className="text-sm font-medium text-foreground/70">
-                  {item.text}
-                </span>
-              </div>
-            );
-          })}
         </div>
       </div>
     </section>

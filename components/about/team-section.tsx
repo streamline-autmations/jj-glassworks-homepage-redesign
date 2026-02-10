@@ -31,23 +31,23 @@ export default function TeamSection() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220_50%_8%/0.88)] via-[hsl(220_50%_8%/0.35)] to-transparent" />
 
-                <div className="absolute inset-x-0 bottom-0 p-3 sm:p-5">
-                  <p className="text-sm sm:text-base font-bold text-white leading-tight">
+                <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
+                  <p className="text-lg sm:text-base font-bold text-white leading-tight">
                     {member.name}
                   </p>
-                  <p className="mt-1 text-[11px] sm:text-xs text-white/70">
+                  <p className="mt-1 text-sm sm:text-xs text-white/70">
                     {member.role}
                   </p>
                   <div className="mt-3 space-y-1">
                     <a
                       href={`mailto:${member.email}`}
-                      className="block text-[11px] sm:text-xs text-white/85 hover:text-primary underline decoration-white/30 hover:decoration-primary/50 underline-offset-4"
+                      className="block text-sm sm:text-xs text-white/85 hover:text-primary underline decoration-white/30 hover:decoration-primary/50 underline-offset-4"
                     >
                       {member.email}
                     </a>
                     <a
                       href={`tel:${member.phone}`}
-                      className="block text-[11px] sm:text-xs text-white/85 hover:text-primary underline decoration-white/30 hover:decoration-primary/50 underline-offset-4"
+                      className="block text-sm sm:text-xs text-white/85 hover:text-primary underline decoration-white/30 hover:decoration-primary/50 underline-offset-4"
                     >
                       {member.phoneDisplay}
                     </a>

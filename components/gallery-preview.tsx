@@ -8,7 +8,7 @@ const developments = [
       "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770715648/imgi_11_342443b7a28b3548c90ec838ef528f54_upscayl_4x_c9qica.jpg",
   },
   {
-    title: "IS MOTORS",
+    title: "I&S Motors",
     image:
       "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770716577/imgi_33_24d77577fe36f8e1a58b9a92278d3ae2_upscayl_4x_zxx6u3.jpg",
   },
