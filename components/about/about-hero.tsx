@@ -28,7 +28,7 @@ export default function AboutHero() {
             return (
               <div
                 key={item.text}
-                className="flex items-center gap-3 bg-background border border-primary/10 px-5 py-3.5"
+                className="flex items-center gap-3 rounded-2xl bg-background px-5 py-3.5 shadow-sm ring-1 ring-border/60"
               >
                 <Icon className="h-4 w-4 text-primary flex-shrink-0" />
                 <span className="text-sm font-medium text-foreground/70">

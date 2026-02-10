@@ -1,32 +1,6 @@
 import Image from "next/image";
-import { Phone, Mail } from "lucide-react";
-
-const team = [
-  {
-    name: "Chris Van Zyl",
-    role: "Director",
-    phone: "0827252559",
-    email: "chrisvanzyl@jjglass.co.za",
-    photo:
-      "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770635054/Chris_xqc8rn.jpg",
-  },
-  {
-    name: "Kenny Van Zyl",
-    role: "Director",
-    phone: "0824595073",
-    email: "jjglass@mweb.co.za",
-    photo:
-      "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770635055/Kenny_vvyxbh.jpg",
-  },
-  {
-    name: "Jacques Viljoen",
-    role: "Operations",
-    phone: "0661291611",
-    email: "jacquesv@jjglass.co.za",
-    photo:
-      "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770635058/Vaak_vdrk8v.jpg",
-  },
-];
+import { cardClassName } from "@/components/ui/card";
+import { teamContacts } from "@/lib/team";
 
 export default function TeamSection() {
   return (
@@ -41,39 +15,44 @@ export default function TeamSection() {
           </h2>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {team.map((member) => (
-            <div key={member.name}>
-              <div className="relative aspect-[3/4] overflow-hidden mb-5 border border-primary/8">
+        <div className="grid grid-cols-3 gap-3 sm:gap-6 lg:gap-8 motion-safe:animate-in motion-safe:fade-in-0 motion-safe:slide-in-from-bottom-2 motion-safe:duration-500">
+          {teamContacts.map((member) => (
+            <div
+              key={member.name}
+              className={cardClassName({ variant: "tile", className: "group" })}
+            >
+              <div className="relative aspect-square overflow-hidden">
                 <Image
                   src={member.photo}
                   alt={`${member.name} - ${member.role}`}
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                   loading="lazy"
                 />
-              </div>
-              <h3 className="text-lg font-semibold text-foreground">
-                {member.name}
-              </h3>
-              <p className="text-sm text-muted-foreground mb-4">
-                {member.role}
-              </p>
-              <div className="flex gap-3">
-                <a
-                  href={`tel:${member.phone}`}
-                  className="inline-flex items-center gap-2 bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
-                >
-                  <Phone className="h-3.5 w-3.5" />
-                  Call
-                </a>
-                <a
-                  href={`mailto:${member.email}`}
-                  className="inline-flex items-center gap-2 border border-primary text-primary px-4 py-2.5 text-sm font-semibold transition-colors hover:bg-primary/5"
-                >
-                  <Mail className="h-3.5 w-3.5" />
-                  Email
-                </a>
+                <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220_50%_8%/0.88)] via-[hsl(220_50%_8%/0.35)] to-transparent" />
+
+                <div className="absolute inset-x-0 bottom-0 p-3 sm:p-5">
+                  <p className="text-sm sm:text-base font-bold text-white leading-tight">
+                    {member.name}
+                  </p>
+                  <p className="mt-1 text-[11px] sm:text-xs text-white/70">
+                    {member.role}
+                  </p>
+                  <div className="mt-3 space-y-1">
+                    <a
+                      href={`mailto:${member.email}`}
+                      className="block text-[11px] sm:text-xs text-white/85 hover:text-primary underline decoration-white/30 hover:decoration-primary/50 underline-offset-4"
+                    >
+                      {member.email}
+                    </a>
+                    <a
+                      href={`tel:${member.phone}`}
+                      className="block text-[11px] sm:text-xs text-white/85 hover:text-primary underline decoration-white/30 hover:decoration-primary/50 underline-offset-4"
+                    >
+                      {member.phoneDisplay}
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           ))}

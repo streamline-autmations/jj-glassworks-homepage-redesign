@@ -1,5 +1,8 @@
 import { Phone, Mail, MapPin, ExternalLink } from "lucide-react";
 
+import { buttonClassName } from "@/components/ui/button";
+import { cardClassName } from "@/components/ui/card";
+
 export default function OfficeContactMap() {
   const mapsSearchUrl =
     "https://www.google.com/maps/search/?api=1&query=57A+Loch+St%2C+Meyerton";
@@ -19,7 +22,7 @@ export default function OfficeContactMap() {
         </div>
 
         <div className="grid md:grid-cols-5 gap-8">
-          <div className="md:col-span-2 flex flex-col justify-between">
+          <div className={cardClassName({ variant: "panel", padding: "md", className: "md:col-span-2 flex flex-col justify-between" })}>
             <div>
               <h3 className="text-lg font-semibold text-foreground mb-8">
                 Reception & General Enquiries
@@ -30,11 +33,11 @@ export default function OfficeContactMap() {
                     href="tel:0163621797"
                     className="flex items-start gap-4 group"
                   >
-                    <div className="flex h-10 w-10 items-center justify-center bg-primary/10 flex-shrink-0">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-primary/10 flex-shrink-0">
                       <Phone className="h-4 w-4 text-primary" />
                     </div>
                     <div>
-                      <span className="block text-xs uppercase tracking-wide text-muted-foreground mb-1">
+                      <span className="block text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground mb-1">
                         Office Tel
                       </span>
                       <span className="block text-sm font-semibold text-foreground group-hover:text-primary transition-colors">
@@ -48,11 +51,11 @@ export default function OfficeContactMap() {
                     href="mailto:jjglass01@mweb.co.za"
                     className="flex items-start gap-4 group"
                   >
-                    <div className="flex h-10 w-10 items-center justify-center bg-primary/10 flex-shrink-0">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-primary/10 flex-shrink-0">
                       <Mail className="h-4 w-4 text-primary" />
                     </div>
                     <div>
-                      <span className="block text-xs uppercase tracking-wide text-muted-foreground mb-1">
+                      <span className="block text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground mb-1">
                         Email
                       </span>
                       <span className="block text-sm font-semibold text-foreground group-hover:text-primary transition-colors">
@@ -63,11 +66,11 @@ export default function OfficeContactMap() {
                 </li>
                 <li>
                   <div className="flex items-start gap-4">
-                    <div className="flex h-10 w-10 items-center justify-center bg-primary/10 flex-shrink-0">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-primary/10 flex-shrink-0">
                       <MapPin className="h-4 w-4 text-primary" />
                     </div>
                     <div>
-                      <span className="block text-xs uppercase tracking-wide text-muted-foreground mb-1">
+                      <span className="block text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground mb-1">
                         Address
                       </span>
                       <span className="block text-sm font-semibold text-foreground">
@@ -83,14 +86,23 @@ export default function OfficeContactMap() {
               href={mapsSearchUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-10 inline-flex items-center justify-center gap-2 bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90 w-full"
+              className={buttonClassName({
+                variant: "primary",
+                size: "lg",
+                className: "mt-10 w-full gap-2",
+              })}
             >
               <ExternalLink className="h-4 w-4" />
               Get Directions
             </a>
           </div>
 
-          <div className="md:col-span-3 overflow-hidden border border-primary/10">
+          <div
+            className={cardClassName({
+              variant: "panel",
+              className: "md:col-span-3 overflow-hidden",
+            })}
+          >
             <div className="relative w-full aspect-video md:aspect-auto md:h-full min-h-[350px]">
               <iframe
                 src={mapsEmbedUrl}

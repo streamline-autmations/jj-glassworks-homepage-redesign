@@ -4,6 +4,8 @@ import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import MobileCTA from "@/components/mobile-cta";
 import { Square, DoorOpen, Store, Droplets, Scissors, Wrench, CheckCircle } from "lucide-react";
+import { buttonClassName } from "@/components/ui/button";
+import { cardClassName } from "@/components/ui/card";
 
 export const metadata: Metadata = {
   title: "Services | JJ Glassworks",
@@ -115,8 +117,8 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="py-24 md:py-32 bg-background">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col gap-24 md:gap-32">
+      <section className="py-20 md:py-28 bg-background">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col gap-20 md:gap-24">
           {services.map((service, index) => {
             const Icon = service.icon;
             const isEven = index % 2 === 0;
@@ -127,7 +129,7 @@ export default function ServicesPage() {
                 className="grid lg:grid-cols-2 gap-10 md:gap-16 items-start"
               >
                 <div className={isEven ? "lg:order-1" : "lg:order-2"}>
-                  <div className="mb-6 flex h-14 w-14 items-center justify-center bg-primary/10">
+                  <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 shadow-sm ring-1 ring-primary/15">
                     <Icon className="h-6 w-6 text-primary" />
                   </div>
                   <h2 className="text-2xl md:text-3xl font-bold text-foreground leading-tight mb-4">
@@ -148,16 +150,18 @@ export default function ServicesPage() {
 
                   <Link
                     href="/contact"
-                    className="inline-flex items-center justify-center bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+                    className={buttonClassName({ variant: "primary", size: "lg" })}
                   >
                     Get a Quote
                   </Link>
                 </div>
 
                 <div
-                  className={`bg-secondary p-8 md:p-10 border-l-2 border-primary ${
-                    isEven ? "lg:order-2" : "lg:order-1"
-                  }`}
+                  className={cardClassName({
+                    variant: "accent",
+                    padding: "md",
+                    className: isEven ? "lg:order-2" : "lg:order-1",
+                  })}
                 >
                   <div className="flex flex-col gap-8">
                     <div>
@@ -180,7 +184,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="py-24 md:py-32 bg-secondary border-t border-primary/10">
+      <section className="py-20 md:py-28 bg-secondary border-t border-primary/10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mx-auto text-center">
             <div className="w-12 h-1 bg-primary mx-auto mb-8" />
@@ -193,7 +197,7 @@ export default function ServicesPage() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+              className={buttonClassName({ variant: "primary", size: "lg" })}
             >
               Request a Quote
             </Link>

@@ -4,6 +4,11 @@ import { useState } from "react";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import MobileCTA from "@/components/mobile-cta";
+import { buttonClassName } from "@/components/ui/button";
+import { cardClassName } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Select } from "@/components/ui/select";
+import { Textarea } from "@/components/ui/textarea";
 import {
   Phone,
   Mail,
@@ -64,7 +69,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="py-24 md:py-32 bg-background">
+      <section className="py-20 md:py-28 bg-background">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 md:gap-24">
             <div>
@@ -73,7 +78,7 @@ export default function ContactPage() {
               </h2>
 
               {submitted && (
-                <div className="mb-8 p-5 bg-secondary border-l-2 border-primary">
+                <div className={cardClassName({ variant: "accent", padding: "sm", className: "mb-8" })}>
                   <p className="font-semibold text-foreground text-sm">Quote Request Received</p>
                   <p className="text-sm text-muted-foreground mt-1">
                     We&apos;ll get back to you as soon as possible.
@@ -86,11 +91,11 @@ export default function ContactPage() {
                   <div className="flex flex-col gap-2">
                     <label
                       htmlFor="name"
-                      className="text-xs font-semibold uppercase tracking-wide text-muted-foreground"
+                      className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground"
                     >
                       Name *
                     </label>
-                    <input
+                    <Input
                       id="name"
                       required
                       value={formData.name}
@@ -98,17 +103,16 @@ export default function ContactPage() {
                         setFormData({ ...formData, name: e.target.value })
                       }
                       placeholder="Your name"
-                      className="flex h-12 w-full border border-primary/15 bg-background px-4 py-2 text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                     />
                   </div>
                   <div className="flex flex-col gap-2">
                     <label
                       htmlFor="phone"
-                      className="text-xs font-semibold uppercase tracking-wide text-muted-foreground"
+                      className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground"
                     >
                       Phone *
                     </label>
-                    <input
+                    <Input
                       id="phone"
                       type="tel"
                       required
@@ -117,7 +121,6 @@ export default function ContactPage() {
                         setFormData({ ...formData, phone: e.target.value })
                       }
                       placeholder="Your phone number"
-                      className="flex h-12 w-full border border-primary/15 bg-background px-4 py-2 text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                     />
                   </div>
                 </div>
@@ -125,11 +128,11 @@ export default function ContactPage() {
                 <div className="flex flex-col gap-2">
                   <label
                     htmlFor="email"
-                    className="text-xs font-semibold uppercase tracking-wide text-muted-foreground"
+                    className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground"
                   >
                     Email
                   </label>
-                  <input
+                  <Input
                     id="email"
                     type="email"
                     value={formData.email}
@@ -137,25 +140,23 @@ export default function ContactPage() {
                       setFormData({ ...formData, email: e.target.value })
                     }
                     placeholder="Your email address"
-                    className="flex h-12 w-full border border-primary/15 bg-background px-4 py-2 text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                   />
                 </div>
 
                 <div className="flex flex-col gap-2">
                   <label
                     htmlFor="service"
-                    className="text-xs font-semibold uppercase tracking-wide text-muted-foreground"
+                    className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground"
                   >
                     Service Needed *
                   </label>
-                  <select
+                  <Select
                     id="service"
                     required
                     value={formData.service}
                     onChange={(e) =>
                       setFormData({ ...formData, service: e.target.value })
                     }
-                    className="flex h-12 w-full border border-primary/15 bg-background px-4 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                   >
                     <option value="">Select a service</option>
                     {serviceOptions.map((service) => (
@@ -163,17 +164,17 @@ export default function ContactPage() {
                         {service}
                       </option>
                     ))}
-                  </select>
+                  </Select>
                 </div>
 
                 <div className="flex flex-col gap-2">
                   <label
                     htmlFor="message"
-                    className="text-xs font-semibold uppercase tracking-wide text-muted-foreground"
+                    className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground"
                   >
                     Project Details *
                   </label>
-                  <textarea
+                  <Textarea
                     id="message"
                     required
                     rows={5}
@@ -182,14 +183,18 @@ export default function ContactPage() {
                       setFormData({ ...formData, message: e.target.value })
                     }
                     placeholder="Tell us about your project -- dimensions, location, any specific requirements..."
-                    className="flex w-full border border-primary/15 bg-background px-4 py-3 text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 min-h-[140px]"
+                    className="min-h-[140px]"
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full inline-flex items-center justify-center bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90 disabled:opacity-50"
+                  className={buttonClassName({
+                    variant: "primary",
+                    size: "lg",
+                    className: "w-full",
+                  })}
                 >
                   {isSubmitting ? "Sending..." : "Submit Quote Request"}
                 </button>
@@ -208,12 +213,16 @@ export default function ContactPage() {
 
               <div className="flex flex-col gap-4 mb-14">
                 <a
-                  href="https://wa.me/27000000000"
+                  href="https://wa.me/27163621797"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-5 bg-secondary border-l-2 border-primary hover:bg-accent transition-colors"
+                  className={cardClassName({
+                    variant: "accent",
+                    padding: "sm",
+                    className: "flex items-center gap-4 hover:bg-accent transition-colors",
+                  })}
                 >
-                  <div className="flex h-10 w-10 items-center justify-center bg-primary/10">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-primary/10">
                     <MessageCircle className="h-5 w-5 text-primary" />
                   </div>
                   <div>
@@ -227,10 +236,14 @@ export default function ContactPage() {
                 </a>
 
                 <a
-                  href="tel:+27000000000"
-                  className="flex items-center gap-4 p-5 bg-secondary border-l-2 border-primary hover:bg-accent transition-colors"
+                  href="tel:0163621797"
+                  className={cardClassName({
+                    variant: "accent",
+                    padding: "sm",
+                    className: "flex items-center gap-4 hover:bg-accent transition-colors",
+                  })}
                 >
-                  <div className="flex h-10 w-10 items-center justify-center bg-primary/10">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-primary/10">
                     <Phone className="h-5 w-5 text-primary" />
                   </div>
                   <div>
@@ -238,16 +251,20 @@ export default function ContactPage() {
                       CALL US
                     </p>
                     <p className="text-base font-semibold text-foreground">
-                      +27 (0) 00 000 0000
+                      016 362 1797
                     </p>
                   </div>
                 </a>
 
                 <a
-                  href="mailto:info@jjglassworks.co.za"
-                  className="flex items-center gap-4 p-5 bg-secondary border-l-2 border-primary hover:bg-accent transition-colors"
+                  href="mailto:jjglass01@mweb.co.za"
+                  className={cardClassName({
+                    variant: "accent",
+                    padding: "sm",
+                    className: "flex items-center gap-4 hover:bg-accent transition-colors",
+                  })}
                 >
-                  <div className="flex h-10 w-10 items-center justify-center bg-primary/10">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-primary/10">
                     <Mail className="h-5 w-5 text-primary" />
                   </div>
                   <div>
@@ -255,13 +272,13 @@ export default function ContactPage() {
                       EMAIL
                     </p>
                     <p className="text-base font-semibold text-foreground">
-                      info@jjglassworks.co.za
+                      jjglass01@mweb.co.za
                     </p>
                   </div>
                 </a>
               </div>
 
-              <div className="bg-[hsl(220_42%_14%)] p-8 md:p-10">
+              <div className="rounded-3xl bg-[hsl(220_42%_14%)] p-8 md:p-10 shadow-sm ring-1 ring-[hsl(0_0%_100%/0.10)]">
                 <h3 className="text-lg font-semibold text-white mb-6">
                   Service Area
                 </h3>

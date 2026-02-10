@@ -1,3 +1,5 @@
+import { cardClassName } from "@/components/ui/card";
+
 const steps = [
   {
     number: "01",
@@ -18,7 +20,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="py-24 md:py-32 bg-secondary">
+    <section className="py-20 md:py-28 bg-secondary">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-16">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-3">
@@ -29,20 +31,20 @@ export default function HowItWorks() {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 md:gap-10">
+        <div className="grid md:grid-cols-3 gap-8 md:gap-10 motion-safe:animate-in motion-safe:fade-in-0 motion-safe:slide-in-from-bottom-2 motion-safe:duration-500">
           {steps.map((step) => (
-              <div key={step.number} className="bg-background p-8 md:p-10 border border-primary/8">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground font-bold text-sm mb-6">
-                  {step.number}
-                </div>
-                <h3 className="text-base font-semibold text-foreground mb-2">
-                  {step.title}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {step.description}
-                </p>
+            <div key={step.number} className={cardClassName({ variant: "panel", padding: "md" })}>
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground font-bold text-sm mb-6">
+                {step.number}
               </div>
-            ))}
+              <h3 className="text-base font-semibold text-foreground mb-2">
+                {step.title}
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {step.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

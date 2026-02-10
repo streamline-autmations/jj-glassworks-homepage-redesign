@@ -46,11 +46,8 @@
 
 @layer utilities {
   .animate-marquee {
-    animation: marquee 60s linear infinite;
-  }
-
-  .animate-logo-ticker {
-    animation: logo-ticker 18s linear infinite;
+    animation: marquee 80s linear infinite;
+    will-change: transform;
   }
 
   @keyframes marquee {
@@ -62,23 +59,9 @@
     }
   }
 
-  @keyframes logo-ticker {
-    0% {
-      transform: translateX(-110%);
-    }
-    100% {
-      transform: translateX(110%);
-    }
-  }
-
   @media (prefers-reduced-motion: reduce) {
     .animate-marquee {
       animation: none;
-    }
-
-    .animate-logo-ticker {
-      animation: none;
-      transform: none;
     }
   }
 }

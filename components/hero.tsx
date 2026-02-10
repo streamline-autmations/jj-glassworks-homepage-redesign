@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { MessageCircle } from "lucide-react";
+import { buttonClassName } from "@/components/ui/button";
 
 const HERO_IMAGE =
   "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770629095/Untitled_515_x_300_px_1920_x_1080_px_erupzf.svg";
@@ -47,15 +48,15 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-3 mb-8">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center bg-white border border-white/70 px-8 py-3.5 text-sm font-extrabold tracking-[0.12em] text-primary transition-colors hover:bg-white/90 uppercase"
+                className={buttonClassName({ variant: "white", size: "lg" })}
               >
                 Get a Quote
               </Link>
               <a
-                href="https://wa.me/27000000000"
+                href="https://wa.me/27163621797"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center border border-white/65 px-8 py-3.5 text-sm font-extrabold tracking-[0.12em] text-white transition-colors hover:bg-white/10 hover:border-white/85 uppercase"
+                className={buttonClassName({ variant: "inverseOutline", size: "lg" })}
               >
                 <MessageCircle className="mr-2 h-4 w-4" />
                 WhatsApp Us

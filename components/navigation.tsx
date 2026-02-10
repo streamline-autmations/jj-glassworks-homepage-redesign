@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
+import { buttonClassName } from "@/components/ui/button";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -66,7 +67,11 @@ export default function Navigation() {
         <div className="flex items-center gap-3 shrink-0 ml-auto">
           <Link
             href="/contact"
-            className="hidden md:inline-flex items-center justify-center bg-primary px-6 py-2.5 text-xs font-extrabold tracking-[0.12em] uppercase text-primary-foreground transition-colors hover:bg-primary/90"
+            className={buttonClassName({
+              variant: "primary",
+              size: "sm",
+              className: "hidden md:inline-flex",
+            })}
           >
             Get a Quote
           </Link>
@@ -102,7 +107,11 @@ export default function Navigation() {
               <Link
                 href="/contact"
                 onClick={() => setIsMenuOpen(false)}
-                className="inline-flex items-center justify-center bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90 w-full"
+                className={buttonClassName({
+                  variant: "primary",
+                  size: "lg",
+                  className: "w-full",
+                })}
               >
                 Get a Quote
               </Link>

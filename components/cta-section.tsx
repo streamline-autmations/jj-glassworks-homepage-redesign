@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { buttonClassName } from "@/components/ui/button";
+
 export default function CTASection() {
   return (
     <section className="bg-primary py-16 md:py-20">
@@ -16,7 +18,7 @@ export default function CTASection() {
 
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center bg-white px-8 py-3.5 text-sm font-extrabold tracking-[0.12em] uppercase text-primary transition-colors hover:bg-white/90"
+            className={buttonClassName({ variant: "white", size: "lg" })}
           >
             REQUEST A FREE QUOTE
           </Link>

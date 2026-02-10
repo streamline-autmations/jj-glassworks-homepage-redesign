@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 
+import { cardClassName } from "@/components/ui/card";
+
 const testimonials = [
   {
     name: "Johan van der Merwe",
@@ -26,7 +28,7 @@ const testimonials = [
 
 function TestimonialCard({ testimonial }: { testimonial: typeof testimonials[0] }) {
   return (
-    <div className="bg-background p-8 md:p-10 border border-primary/8">
+    <div className={cardClassName({ variant: "panel", padding: "md" })}>
       <div className="flex gap-0.5 mb-5">
         {[...Array(testimonial.rating)].map((_, i) => (
           <Star key={i} className="h-4 w-4 fill-primary text-primary" />
@@ -35,7 +37,7 @@ function TestimonialCard({ testimonial }: { testimonial: typeof testimonials[0] 
       <blockquote className="text-sm text-muted-foreground leading-relaxed mb-8">
         {`"${testimonial.text}"`}
       </blockquote>
-      <div className="border-t border-primary/10 pt-5">
+      <div className="border-t border-border pt-5">
         <p className="text-sm font-semibold text-foreground">{testimonial.name}</p>
         <p className="text-xs text-muted-foreground mt-1">{testimonial.company}</p>
       </div>
@@ -47,7 +49,7 @@ export default function Testimonials() {
   const [current, setCurrent] = useState(0);
 
   return (
-    <section className="py-24 md:py-32 bg-background">
+    <section className="py-20 md:py-28 bg-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-16">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-3">
@@ -59,7 +61,7 @@ export default function Testimonials() {
         </div>
 
         {/* Desktop: 3-column grid */}
-        <div className="hidden md:grid md:grid-cols-3 gap-6">
+        <div className="hidden md:grid md:grid-cols-3 gap-6 motion-safe:animate-in motion-safe:fade-in-0 motion-safe:slide-in-from-bottom-2 motion-safe:duration-500">
           {testimonials.map((testimonial, index) => (
             <TestimonialCard key={index} testimonial={testimonial} />
           ))}
@@ -85,7 +87,7 @@ export default function Testimonials() {
                 <button
                   key={i}
                   onClick={() => setCurrent(i)}
-                  className={`h-2 transition-all ${
+                  className={`h-2 rounded-full transition-all ${
                     i === current ? "w-6 bg-primary" : "w-2 bg-primary/25"
                   }`}
                   aria-label={`Go to testimonial ${i + 1}`}
@@ -95,14 +97,14 @@ export default function Testimonials() {
             <div className="flex gap-2">
               <button
                 onClick={() => setCurrent((c) => (c - 1 + testimonials.length) % testimonials.length)}
-                className="flex h-9 w-9 items-center justify-center border border-primary/20 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                className="flex h-10 w-10 items-center justify-center rounded-2xl ring-1 ring-border/60 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
                 aria-label="Previous testimonial"
               >
                 <ChevronLeft className="h-4 w-4" />
               </button>
               <button
                 onClick={() => setCurrent((c) => (c + 1) % testimonials.length)}
-                className="flex h-9 w-9 items-center justify-center border border-primary/20 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                className="flex h-10 w-10 items-center justify-center rounded-2xl ring-1 ring-border/60 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
                 aria-label="Next testimonial"
               >
                 <ChevronRight className="h-4 w-4" />

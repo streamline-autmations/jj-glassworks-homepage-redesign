@@ -5,6 +5,8 @@ import Link from "next/link";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import MobileCTA from "@/components/mobile-cta";
+import { buttonClassName } from "@/components/ui/button";
+import { cardClassName } from "@/components/ui/card";
 
 const projects = [
   { title: "Retail Shopfront", category: "Commercial", description: "Complete aluminium shopfront system" },
@@ -50,18 +52,18 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      <section className="py-4 bg-background border-b border-primary/10">
+      <section className="py-6 bg-background border-b border-border">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-2">
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold transition-colors ${
+                className={
                   activeCategory === category
-                    ? "bg-primary text-primary-foreground"
-                    : "border border-primary/15 bg-background text-foreground hover:bg-secondary"
-                }`}
+                    ? buttonClassName({ variant: "primary", size: "sm", shape: "pill" })
+                    : buttonClassName({ variant: "outline", size: "sm", shape: "pill" })
+                }
               >
                 {category}
               </button>
@@ -70,13 +72,17 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-20 md:py-28 bg-background">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-1">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {filteredProjects.map((project, index) => (
               <div
                 key={index}
-                className="group relative aspect-[4/3] overflow-hidden bg-[hsl(220_42%_14%)] flex items-center justify-center"
+                className={cardClassName({
+                  variant: "tile",
+                  className:
+                    "group relative aspect-[4/3] flex items-center justify-center bg-[hsl(220_42%_14%)]",
+                })}
               >
                 <div className="text-center px-4">
                   <p className="text-[10px] font-semibold uppercase tracking-[0.15em] text-primary/50 mb-2">
@@ -95,7 +101,7 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      <section className="py-24 md:py-32 bg-secondary border-t border-primary/10">
+      <section className="py-20 md:py-28 bg-secondary border-t border-border">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mx-auto text-center">
             <div className="w-12 h-1 bg-primary mx-auto mb-8" />
@@ -107,7 +113,7 @@ export default function GalleryPage() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+              className={buttonClassName({ variant: "primary", size: "lg" })}
             >
               Get a Quote
             </Link>

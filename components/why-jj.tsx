@@ -1,5 +1,7 @@
 import { Ruler, Factory, ShieldCheck, Building2 } from "lucide-react";
 
+import { cardClassName } from "@/components/ui/card";
+
 const reasons = [
   {
     icon: Ruler,
@@ -29,43 +31,31 @@ const reasons = [
 
 export default function WhyJJ() {
   return (
-    <section className="py-20 md:py-24 bg-[#F5FAFF]">
+    <section className="py-20 md:py-28 bg-secondary border-y border-border">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight text-center">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight text-center">
           WHY CHOOSE JJ GLASS &amp; ALUMINIUM
         </h2>
 
-        <div className="mt-12 border border-[#D8ECFF] bg-white">
-          <div className="grid grid-cols-2 lg:grid-cols-4">
-            {reasons.map((reason, index) => {
+        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6 motion-safe:animate-in motion-safe:fade-in-0 motion-safe:slide-in-from-bottom-2 motion-safe:duration-500">
+          {reasons.map((reason) => {
             const Icon = reason.icon;
-            const tileClasses = [
-              "p-7 md:p-9 flex flex-col gap-4",
-              "border-[#D8ECFF]",
-              index < 2 ? "border-b" : "",
-              index % 2 === 0 ? "border-r" : "",
-              "lg:border-b-0",
-              index < 3 ? "lg:border-r" : "lg:border-r-0",
-            ]
-              .filter(Boolean)
-              .join(" ");
             return (
-              <div key={reason.title} className={tileClasses}>
-                <div className="flex h-11 w-11 items-center justify-center border border-[#D8ECFF] bg-[#F5FAFF] flex-shrink-0">
-                  <Icon className="h-5 w-5 text-[#3FA9F5]" strokeWidth={1.75} />
+              <div key={reason.title} className={cardClassName({ variant: "panel", padding: "sm" })}>
+                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary/10 shadow-sm ring-1 ring-primary/15 flex-shrink-0">
+                  <Icon className="h-5 w-5 text-primary" strokeWidth={1.75} />
                 </div>
-                <div>
-                  <h3 className="text-base font-extrabold text-[#0F172A] tracking-tight">
+                <div className="mt-5">
+                  <h3 className="text-base font-extrabold text-foreground tracking-tight">
                     {reason.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-[#162638]">
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                     {reason.description}
                   </p>
                 </div>
               </div>
             );
-            })}
-          </div>
+          })}
         </div>
       </div>
     </section>

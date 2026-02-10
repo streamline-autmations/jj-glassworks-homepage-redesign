@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import { cardClassName } from "@/components/ui/card";
+
 const certifications = [
   {
     src: "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770629644/imgi_28_ea81cd84f79b936e445d46b52e2158c6_uuwm8d.png",
@@ -20,16 +22,21 @@ const certifications = [
 
 export default function TrustCredentials() {
   return (
-    <section className="py-16 md:py-20 border-y border-primary/10 bg-secondary">
+    <section className="py-16 md:py-20 border-y border-border bg-secondary">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary text-center mb-10">
           Certified & Industry Recognised
         </p>
 
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-10 sm:gap-16 md:gap-24">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-10 sm:gap-16 md:gap-24 motion-safe:animate-in motion-safe:fade-in-0 motion-safe:slide-in-from-bottom-2 motion-safe:duration-500">
           {certifications.map((cert) => (
             <div key={cert.name} className="flex flex-col items-center gap-3">
-              <div className="relative h-20 w-44 flex items-center justify-center p-3 bg-background border border-primary/8">
+              <div
+                className={cardClassName({
+                  variant: "panel",
+                  className: "relative h-20 w-44 flex items-center justify-center p-3 rounded-2xl",
+                })}
+              >
                 <Image
                   src={cert.src}
                   alt={cert.alt}
