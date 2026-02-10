@@ -38,17 +38,9 @@ export default function Navigation() {
             <Image
               src="https://res.cloudinary.com/dnlgohkcc/image/upload/v1770741423/Untitled_design_58_r6mfhp.png"
               alt="JJ Glassworks"
-              width={96}
-              height={48}
-              className="h-9 w-auto md:hidden"
-              priority
-            />
-            <Image
-              src="https://res.cloudinary.com/dnlgohkcc/image/upload/v1770624401/Untitled_515_x_300_px_wdny38.svg"
-              alt="JJ Glassworks"
-              width={130}
-              height={44}
-              className="h-9 w-auto hidden md:block"
+              width={160}
+              height={52}
+              className="h-9 md:h-5 w-auto"
               priority
             />
           </Link>

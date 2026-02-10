@@ -4,10 +4,10 @@ import { MessageCircle } from "lucide-react";
 import { buttonClassName } from "@/components/ui/button";
 
 const HERO_IMAGE_DESKTOP =
-  "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770740502/Untitled_515_x_300_px_1920_x_1080_px_cmaeuj.jpg";
+  "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770752419/hero_image_2560x1080_rfyacf.jpg";
 
 const HERO_IMAGE_MOBILE =
-  "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770740607/Untitled_design_58_yhhek7.png";
+  "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770752419/hero_image_2560x1080_rfyacf.jpg";
 
 export default function Hero() {
   return (
@@ -17,7 +17,7 @@ export default function Hero() {
           src={HERO_IMAGE_DESKTOP}
           alt="JJ Glassworks precision glass and aluminium work"
           fill
-          className="object-contain hidden md:block"
+          className="object-cover hidden md:block"
           priority
           sizes="100vw"
         />

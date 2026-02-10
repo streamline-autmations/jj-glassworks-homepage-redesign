@@ -24,7 +24,7 @@ const logos = [
 ];
 
 export default function ClientsCredibility() {
-  const marqueeLogos = [...logos, ...logos];
+  const marqueeLogos = [...logos, ...logos, ...logos, ...logos];
 
   return (
     <section className="w-full bg-primary py-10 sm:py-12 md:py-14 border-y border-[hsl(0_0%_100%/0.14)]">

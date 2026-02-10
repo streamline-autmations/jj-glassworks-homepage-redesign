@@ -69,9 +69,9 @@ function ServiceTile({ service }: { service: Service }) {
 
 export default function ServicesGrid() {
   return (
-    <section className="py-20 md:py-28 bg-secondary border-y border-border">
+    <section className="py-20 md:py-28 bg-[hsl(var(--brand-deep))] border-y border-white/10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight text-center mb-12">
+        <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight text-center mb-12">
           OUR SERVICES
         </h2>
 
