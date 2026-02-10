@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
 
 import { teamContacts } from "@/lib/team";
 
@@ -32,27 +32,47 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-background border-t border-border py-14 md:py-16">
+    <footer className="bg-primary text-primary-foreground border-t border-white/10 py-14 md:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="md:hidden">
           <div>
             <Link href="/" className="inline-flex items-center">
               <Image
-                src="https://res.cloudinary.com/dnlgohkcc/image/upload/v1770624401/Untitled_515_x_300_px_wdny38.svg"
+                src="https://res.cloudinary.com/dnlgohkcc/image/upload/v1770741423/Untitled_design_58_r6mfhp.png"
                 alt="JJ Glassworks"
                 width={160}
                 height={52}
-                className="h-10 w-auto"
+                className="h-10 w-auto brightness-0 invert"
               />
             </Link>
-            <p className="text-sm text-muted-foreground mt-5 leading-relaxed">
+            <p className="text-sm text-white/75 mt-5 leading-relaxed">
               Precision glass and aluminium solutions for residential and commercial projects since 1988.
             </p>
+            <div className="mt-6 flex items-center gap-3">
+              <a
+                href="https://www.facebook.com/people/JJ-Glassworks-CC/61575574604887/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="JJ Glassworks Facebook"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-[hsl(var(--brand-sky))] text-white transition-colors hover:bg-white hover:text-[hsl(var(--primary))]"
+              >
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a
+                href="https://www.instagram.com/jj57glassworkscc/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="JJ Glassworks Instagram"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-[hsl(var(--brand-sky))] text-white transition-colors hover:bg-white hover:text-[hsl(var(--primary))]"
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
+            </div>
           </div>
 
           <div className="mt-10 grid grid-cols-1 gap-10">
             <div>
-              <h4 className="text-sm font-extrabold tracking-[0.12em] text-foreground uppercase">
+              <h4 className="text-sm font-extrabold tracking-[0.12em] text-white uppercase">
                 Quick Links
               </h4>
               <ul className="mt-6 flex flex-col gap-3">
@@ -60,7 +80,7 @@ export default function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-sm text-foreground/80 hover:text-foreground transition-colors"
+                      className="text-sm text-white/80 hover:text-white transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -70,7 +90,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <h4 className="text-sm font-extrabold tracking-[0.12em] text-foreground uppercase">
+              <h4 className="text-sm font-extrabold tracking-[0.12em] text-white uppercase">
                 Services
               </h4>
               <ul className="mt-6 flex flex-col gap-3">
@@ -78,7 +98,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-sm text-foreground/80 hover:text-foreground transition-colors"
+                      className="text-sm text-white/80 hover:text-white transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -88,7 +108,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <h4 className="text-sm font-extrabold tracking-[0.12em] text-foreground uppercase">
+              <h4 className="text-sm font-extrabold tracking-[0.12em] text-white uppercase">
                 Featured Projects
               </h4>
               <ul className="mt-6 flex flex-col gap-3">
@@ -96,7 +116,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-sm text-foreground/80 hover:text-foreground transition-colors"
+                      className="text-sm text-white/80 hover:text-white transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -106,28 +126,28 @@ export default function Footer() {
             </div>
 
             <div>
-              <h4 className="text-sm font-extrabold tracking-[0.12em] text-foreground uppercase">
+              <h4 className="text-sm font-extrabold tracking-[0.12em] text-white uppercase">
                 Contact Us
               </h4>
-              <div className="mt-6 border-t border-border">
+              <div className="mt-6 border-t border-white/10">
                 {teamContacts.map((member) => (
-                  <div key={member.name} className="py-6 border-b border-border">
-                    <p className="text-sm font-semibold text-foreground">{member.name}</p>
-                    <p className="text-xs text-muted-foreground mt-1">{member.role}</p>
+                  <div key={member.name} className="py-6 border-b border-white/10">
+                    <p className="text-sm font-semibold text-white">{member.name}</p>
+                    <p className="text-xs text-white/65 mt-1">{member.role}</p>
                     <div className="mt-4 flex flex-col gap-3">
                       <a
                         href={`tel:${member.phone}`}
-                        className="flex items-start gap-3 text-sm text-foreground/80 hover:text-foreground transition-colors"
+                        className="flex items-start gap-3 text-sm text-white/80 hover:text-white transition-colors"
                       >
-                        <Phone className="h-4 w-4 mt-0.5 flex-shrink-0 text-primary" />
-                        <span className="text-foreground/80">{member.phoneDisplay}</span>
+                        <Phone className="h-4 w-4 mt-0.5 flex-shrink-0 text-[hsl(var(--brand-sky))]" />
+                        <span className="text-white/80">{member.phoneDisplay}</span>
                       </a>
                       <a
                         href={`mailto:${member.email}`}
-                        className="flex items-start gap-3 text-sm text-foreground/80 hover:text-foreground transition-colors"
+                        className="flex items-start gap-3 text-sm text-white/80 hover:text-white transition-colors"
                       >
-                        <Mail className="h-4 w-4 mt-0.5 flex-shrink-0 text-primary" />
-                        <span className="text-foreground/80">{member.email}</span>
+                        <Mail className="h-4 w-4 mt-0.5 flex-shrink-0 text-[hsl(var(--brand-sky))]" />
+                        <span className="text-white/80">{member.email}</span>
                       </a>
                     </div>
                   </div>
@@ -139,17 +159,17 @@ export default function Footer() {
                   href="https://maps.google.com/?q=57A%20Loch%20St,%20Meyerton"
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-start gap-3 text-sm text-foreground/80 hover:text-foreground transition-colors"
+                  className="flex items-start gap-3 text-sm text-white/80 hover:text-white transition-colors"
                 >
-                  <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0 text-primary" />
-                  <span className="text-foreground/80">57A Loch St, Meyerton</span>
+                  <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0 text-[hsl(var(--brand-sky))]" />
+                  <span className="text-white/80">57A Loch St, Meyerton</span>
                 </a>
               </div>
             </div>
           </div>
 
-          <div className="mt-12 pt-8 border-t border-border">
-            <p className="text-xs text-muted-foreground">
+          <div className="mt-12 pt-8 border-t border-white/10">
+            <p className="text-xs text-white/65">
               {`\u00A9 ${currentYear} JJ Glassworks. All rights reserved.`}
             </p>
           </div>
@@ -159,20 +179,40 @@ export default function Footer() {
           <div className="max-w-md md:col-span-5">
             <Link href="/" className="inline-flex items-center">
               <Image
-                src="https://res.cloudinary.com/dnlgohkcc/image/upload/v1770624401/Untitled_515_x_300_px_wdny38.svg"
+                src="https://res.cloudinary.com/dnlgohkcc/image/upload/v1770741423/Untitled_design_58_r6mfhp.png"
                 alt="JJ Glassworks"
                 width={140}
                 height={46}
-                className="h-9 w-auto"
+                className="h-9 w-auto brightness-0 invert"
               />
             </Link>
-            <p className="text-sm text-muted-foreground mt-5 leading-relaxed">
+            <p className="text-sm text-white/75 mt-5 leading-relaxed">
               Precision glass and aluminium solutions for residential and commercial projects since 1988.
             </p>
+            <div className="mt-6 flex items-center gap-3">
+              <a
+                href="https://www.facebook.com/people/JJ-Glassworks-CC/61575574604887/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="JJ Glassworks Facebook"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-[hsl(var(--brand-sky))] text-white transition-colors hover:bg-white hover:text-[hsl(var(--primary))]"
+              >
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a
+                href="https://www.instagram.com/jj57glassworkscc/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="JJ Glassworks Instagram"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-[hsl(var(--brand-sky))] text-white transition-colors hover:bg-white hover:text-[hsl(var(--primary))]"
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
+            </div>
           </div>
 
           <div className="md:col-span-3">
-            <h4 className="text-sm font-extrabold tracking-[0.12em] text-foreground uppercase">
+            <h4 className="text-sm font-extrabold tracking-[0.12em] text-white uppercase">
               Pages
             </h4>
             <ul className="mt-6 flex flex-col gap-3">
@@ -180,7 +220,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-foreground/80 hover:text-foreground transition-colors"
+                    className="text-sm text-white/80 hover:text-white transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -190,33 +230,33 @@ export default function Footer() {
           </div>
 
           <div className="max-w-md md:col-span-4">
-            <h4 className="text-sm font-extrabold tracking-[0.12em] text-foreground uppercase">
+            <h4 className="text-sm font-extrabold tracking-[0.12em] text-white uppercase">
               Office & Location
             </h4>
             <ul className="flex flex-col gap-5 mt-6">
               <li>
-                <p className="text-xs font-extrabold tracking-[0.12em] uppercase text-foreground">
+                <p className="text-xs font-extrabold tracking-[0.12em] uppercase text-white">
                   Reception & General Enquiries
                 </p>
                 <div className="mt-2 flex flex-col gap-3">
                   <a
                     href="tel:+27163621797"
-                    className="flex items-start gap-3 text-sm text-foreground/80 hover:text-foreground transition-colors"
+                    className="flex items-start gap-3 text-sm text-white/80 hover:text-white transition-colors"
                   >
-                    <Phone className="h-4 w-4 mt-0.5 flex-shrink-0 text-primary" />
+                    <Phone className="h-4 w-4 mt-0.5 flex-shrink-0 text-[hsl(var(--brand-sky))]" />
                     <span>
-                      <span className="font-semibold text-foreground">Office Tel</span>{" "}
-                      <span className="text-foreground/80">016 362 1797</span>
+                      <span className="font-semibold text-white">Office Tel</span>{" "}
+                      <span className="text-white/80">016 362 1797</span>
                     </span>
                   </a>
                   <a
                     href="mailto:jjglass01@mweb.co.za"
-                    className="flex items-start gap-3 text-sm text-foreground/80 hover:text-foreground transition-colors"
+                    className="flex items-start gap-3 text-sm text-white/80 hover:text-white transition-colors"
                   >
-                    <Mail className="h-4 w-4 mt-0.5 flex-shrink-0 text-primary" />
+                    <Mail className="h-4 w-4 mt-0.5 flex-shrink-0 text-[hsl(var(--brand-sky))]" />
                     <span>
-                      <span className="font-semibold text-foreground">Email</span>{" "}
-                      <span className="text-foreground/80">jjglass01@mweb.co.za</span>
+                      <span className="font-semibold text-white">Email</span>{" "}
+                      <span className="text-white/80">jjglass01@mweb.co.za</span>
                     </span>
                   </a>
                 </div>
@@ -226,12 +266,12 @@ export default function Footer() {
                   href="https://maps.google.com/?q=57A%20Loch%20St,%20Meyerton"
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-start gap-3 text-sm text-foreground/80 hover:text-foreground transition-colors"
+                  className="flex items-start gap-3 text-sm text-white/80 hover:text-white transition-colors"
                 >
-                  <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0 text-primary" />
+                  <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0 text-[hsl(var(--brand-sky))]" />
                   <span>
-                    <span className="font-semibold text-foreground">Address</span>{" "}
-                    <span className="text-foreground/80">57A Loch St, Meyerton</span>
+                    <span className="font-semibold text-white">Address</span>{" "}
+                    <span className="text-white/80">57A Loch St, Meyerton</span>
                   </span>
                 </a>
               </li>
@@ -239,8 +279,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="hidden md:block mt-12 pt-8 border-t border-border">
-          <p className="text-xs text-muted-foreground">
+        <div className="hidden md:block mt-12 pt-8 border-t border-white/10">
+          <p className="text-xs text-white/65">
             {`\u00A9 ${currentYear} JJ Glassworks. All rights reserved.`}
           </p>
         </div>

@@ -26,7 +26,7 @@ export default function AboutSnapshot() {
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
           <div className="relative aspect-[4/3] md:aspect-auto md:min-h-[520px] w-full overflow-hidden rounded-3xl bg-background shadow-sm ring-1 ring-border/60">
             <Image
-              src="https://res.cloudinary.com/dnlgohkcc/image/upload/v1770726537/Untitled_design_bnjygq.jpg"
+              src="https://res.cloudinary.com/dnlgohkcc/image/upload/v1770740856/Untitled_20design_upscayl_8x_jd9mlb.jpg"
               alt="JJ Glassworks workshop and installations"
               fill
               sizes="(min-width: 1024px) 45vw, (min-width: 768px) 50vw, 92vw"

@@ -16,6 +16,8 @@ import {
   MapPin,
   Clock,
   CheckCircle,
+  Facebook,
+  Instagram,
 } from "lucide-react";
 
 const serviceOptions = [
@@ -234,6 +236,56 @@ export default function ContactPage() {
                     </p>
                   </div>
                 </a>
+
+                <div className="flex items-center gap-4">
+                  <a
+                    href="https://www.facebook.com/people/JJ-Glassworks-CC/61575574604887/"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="JJ Glassworks Facebook"
+                    className={cardClassName({
+                      variant: "accent",
+                      padding: "sm",
+                      className: "flex-1 flex items-center gap-4 hover:bg-accent transition-colors",
+                    })}
+                  >
+                    <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-[hsl(var(--brand-sky))] text-white">
+                      <Facebook className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-wide text-primary/60 mb-1">
+                        FACEBOOK
+                      </p>
+                      <p className="text-base font-semibold text-foreground">
+                        Follow Us
+                      </p>
+                    </div>
+                  </a>
+
+                  <a
+                    href="https://www.instagram.com/jj57glassworkscc/"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="JJ Glassworks Instagram"
+                    className={cardClassName({
+                      variant: "accent",
+                      padding: "sm",
+                      className: "flex-1 flex items-center gap-4 hover:bg-accent transition-colors",
+                    })}
+                  >
+                    <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-[hsl(var(--brand-sky))] text-white">
+                      <Instagram className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-wide text-primary/60 mb-1">
+                        INSTAGRAM
+                      </p>
+                      <p className="text-base font-semibold text-foreground">
+                        See Our Work
+                      </p>
+                    </div>
+                  </a>
+                </div>
 
                 <a
                   href="tel:0163621797"

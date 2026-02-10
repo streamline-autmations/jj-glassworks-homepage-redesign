@@ -36,11 +36,19 @@ export default function Navigation() {
         <div className="flex items-center shrink-0">
           <Link href="/" className="flex items-center">
             <Image
+              src="https://res.cloudinary.com/dnlgohkcc/image/upload/v1770741423/Untitled_design_58_r6mfhp.png"
+              alt="JJ Glassworks"
+              width={96}
+              height={48}
+              className="h-9 w-auto md:hidden"
+              priority
+            />
+            <Image
               src="https://res.cloudinary.com/dnlgohkcc/image/upload/v1770624401/Untitled_515_x_300_px_wdny38.svg"
               alt="JJ Glassworks"
               width={130}
               height={44}
-              className="h-9 w-auto"
+              className="h-9 w-auto hidden md:block"
               priority
             />
           </Link>

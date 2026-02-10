@@ -3,23 +3,26 @@ import Image from "next/image";
 import { MessageCircle } from "lucide-react";
 import { buttonClassName } from "@/components/ui/button";
 
-const HERO_IMAGE =
-  "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770629095/Untitled_515_x_300_px_1920_x_1080_px_erupzf.svg";
+const HERO_IMAGE_DESKTOP =
+  "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770740502/Untitled_515_x_300_px_1920_x_1080_px_cmaeuj.jpg";
+
+const HERO_IMAGE_MOBILE =
+  "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770740607/Untitled_design_58_yhhek7.png";
 
 export default function Hero() {
   return (
     <section className="relative pt-16">
-      <div className="relative w-full aspect-[4/5] md:aspect-[16/9] overflow-hidden flex items-center">
+      <div className="relative w-full aspect-[4/5] md:aspect-auto md:h-[calc(100vh-4rem)] md:max-h-[720px] overflow-hidden flex items-center bg-[hsl(220_50%_8%)]">
         <Image
-          src={HERO_IMAGE}
+          src={HERO_IMAGE_DESKTOP}
           alt="JJ Glassworks precision glass and aluminium work"
           fill
-          className="object-cover hidden md:block"
+          className="object-contain hidden md:block"
           priority
           sizes="100vw"
         />
         <Image
-          src={HERO_IMAGE}
+          src={HERO_IMAGE_MOBILE}
           alt="JJ Glassworks precision glass and aluminium work"
           fill
           className="object-cover md:hidden"

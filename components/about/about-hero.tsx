@@ -1,4 +1,5 @@
 import { Building2, Factory, Home } from "lucide-react";
+import Image from "next/image";
 
 const highlights = [
   { icon: Building2, text: "Established since 1988" },
@@ -8,8 +9,18 @@ const highlights = [
 
 export default function AboutHero() {
   return (
-    <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-secondary">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="relative overflow-hidden pt-32 pb-16 md:pt-40 md:pb-20 bg-secondary">
+      <Image
+        src="https://res.cloudinary.com/dnlgohkcc/image/upload/v1770742920/Untitled_design_58_gqd5lh.png"
+        alt=""
+        fill
+        priority
+        className="object-cover"
+        sizes="100vw"
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--background)/0.90)] via-[hsl(var(--background)/0.80)] to-[hsl(var(--background)/1)]" />
+
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-4">
             Who We Are
@@ -28,7 +39,7 @@ export default function AboutHero() {
             return (
               <div
                 key={item.text}
-                className="flex items-center gap-3 rounded-2xl bg-background px-5 py-3.5 shadow-sm ring-1 ring-border/60"
+                className="flex items-center gap-3 rounded-2xl bg-background/80 backdrop-blur-sm px-5 py-3.5 shadow-sm ring-1 ring-border/60"
               >
                 <Icon className="h-4 w-4 text-primary flex-shrink-0" />
                 <span className="text-sm font-medium text-foreground/70">
