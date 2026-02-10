@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" fill="none">
+  <rect width="1600" height="1000" fill="#FFFFFF" />
+  <rect x="120" y="120" width="1360" height="760" fill="hsl(210 100% 55% / 0.10)" />
+  <path d="M240 720H1360" stroke="hsl(210 100% 55% / 0.35)" stroke-width="8" />
+  <path d="M240 780H1120" stroke="hsl(210 100% 55% / 0.20)" stroke-width="8" />
+  <rect x="240" y="240" width="520" height="360" fill="#FFFFFF" />
+  <path d="M780 240H1360V600H780V240Z" fill="#FFFFFF" />
+  <path d="M260 560L420 420L520 520L700 340L740 380V600H260V560Z" fill="hsl(210 100% 55% / 0.18)" />
+</svg>
