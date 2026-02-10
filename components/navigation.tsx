@@ -66,7 +66,7 @@ export default function Navigation() {
         <div className="flex items-center gap-3 shrink-0 ml-auto">
           <Link
             href="/contact"
-            className="hidden md:inline-flex items-center justify-center bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+            className="hidden md:inline-flex items-center justify-center bg-primary px-6 py-2.5 text-xs font-extrabold tracking-[0.12em] uppercase text-primary-foreground transition-colors hover:bg-primary/90"
           >
             Get a Quote
           </Link>

@@ -1,11 +1,4 @@
-import Link from "next/link";
 import Image from "next/image";
-
-const features = [
-  { title: "Established since 1988", detail: "Family-owned craftsmanship" },
-  { title: "In-house fabrication & cutting", detail: "Quality control end-to-end" },
-  { title: "Residential & commercial projects", detail: "Built for any scale" },
-];
 
 export default function AboutSnapshot() {
   return (
@@ -21,36 +14,16 @@ export default function AboutSnapshot() {
               cutting. Established in 1988, we deliver residential and commercial installations with clean
               workmanship and reliable turnaround.
             </p>
-
-            <div className="mt-8">
-              <Link
-                href="/about"
-                className="inline-flex items-center justify-center bg-primary px-8 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
-              >
-                READ MORE
-              </Link>
-            </div>
-
-            <div className="mt-10 grid gap-4 sm:grid-cols-3">
-              {features.map((feature) => (
-                <div key={feature.title} className="border border-border px-5 py-4">
-                  <p className="text-sm font-semibold text-foreground leading-snug">
-                    {feature.title}
-                  </p>
-                  <p className="text-xs text-muted-foreground mt-2">
-                    {feature.detail}
-                  </p>
-                </div>
-              ))}
-            </div>
           </div>
 
-          <div className="relative aspect-[16/10] w-full border border-border overflow-hidden">
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl bg-background shadow-sm ring-1 ring-border/60">
             <Image
-              src="/placeholders/about.svg"
+              src="https://res.cloudinary.com/dnlgohkcc/image/upload/v1770726537/Untitled_design_bnjygq.jpg"
               alt="JJ Glassworks workshop and installations"
               fill
+              sizes="(min-width: 1024px) 45vw, (min-width: 768px) 50vw, 92vw"
               className="object-cover"
+              priority
             />
           </div>
         </div>

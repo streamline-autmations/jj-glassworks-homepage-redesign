@@ -13,9 +13,9 @@ export default function HomePage() {
     <main className="min-h-screen">
       <Navigation />
       <Hero />
-      <ClientsCredibility />
       <AboutSnapshot />
       <ServicesGrid />
+      <ClientsCredibility />
       <WhyJJ />
       <GalleryPreview />
       <CTASection />

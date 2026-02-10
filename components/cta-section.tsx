@@ -16,7 +16,7 @@ export default function CTASection() {
 
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center bg-white px-8 py-3.5 text-sm font-bold text-primary transition-colors hover:bg-white/90"
+            className="inline-flex items-center justify-center bg-white px-8 py-3.5 text-sm font-extrabold tracking-[0.12em] uppercase text-primary transition-colors hover:bg-white/90"
           >
             REQUEST A FREE QUOTE
           </Link>

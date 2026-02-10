@@ -24,21 +24,25 @@ const logos = [
 ];
 
 export default function ClientsCredibility() {
-  const marqueeLogos = [...logos, ...logos];
-
   return (
-    <section className="bg-primary py-8">
+    <section className="bg-primary py-8 border-y border-[hsl(0_0%_100%/0.12)]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="overflow-hidden">
-          <div className="flex w-max items-center gap-12 sm:gap-16 md:gap-20 animate-marquee motion-reduce:animate-none">
-            {marqueeLogos.map((logo, index) => (
-              <div key={`${logo.alt}-${index}`} className="flex items-center justify-center h-12 sm:h-14 md:h-16">
+        <h2 className="text-center text-xs sm:text-sm font-extrabold tracking-[0.18em] uppercase text-white/90">
+          Companies We’ve Worked With
+        </h2>
+        <div className="relative overflow-hidden">
+          <div className="mt-5 flex w-max items-center gap-7 sm:gap-9 md:gap-10 animate-logo-ticker motion-reduce:animate-none">
+            {logos.map((logo) => (
+              <div
+                key={logo.alt}
+                className="flex items-center justify-center h-12 sm:h-14 md:h-16"
+              >
                 <Image
                   src={logo.src}
                   alt={logo.alt}
                   width={220}
                   height={80}
-                  className="h-8 sm:h-9 md:h-10 w-auto object-contain brightness-0 invert"
+                  className="h-8 sm:h-10 md:h-11 w-auto object-contain brightness-0 invert opacity-95"
                 />
               </div>
             ))}

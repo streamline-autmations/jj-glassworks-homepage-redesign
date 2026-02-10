@@ -10,28 +10,28 @@
     --card-foreground: 220 40% 16%;
     --popover: 0 0% 100%;
     --popover-foreground: 220 40% 16%;
-    --primary: 210 100% 55%;
+    --primary: 218 86% 48%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 210 100% 98%;
+    --secondary: 220 25% 97%;
     --secondary-foreground: 220 40% 16%;
-    --muted: 210 60% 97%;
+    --muted: 220 20% 96%;
     --muted-foreground: 220 22% 40%;
-    --accent: 210 100% 98%;
+    --accent: 220 25% 97%;
     --accent-foreground: 220 40% 16%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --border: 210 34% 90%;
-    --input: 210 34% 90%;
-    --ring: 210 100% 55%;
+    --border: 220 18% 88%;
+    --input: 220 18% 88%;
+    --ring: 218 86% 48%;
     --radius: 0.125rem;
     --sidebar-background: 0 0% 100%;
     --sidebar-foreground: 220 40% 16%;
-    --sidebar-primary: 210 100% 55%;
+    --sidebar-primary: 218 86% 48%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 210 100% 98%;
+    --sidebar-accent: 220 25% 97%;
     --sidebar-accent-foreground: 220 40% 16%;
-    --sidebar-border: 210 34% 90%;
-    --sidebar-ring: 210 100% 55%;
+    --sidebar-border: 220 18% 88%;
+    --sidebar-ring: 218 86% 48%;
   }
 }
 
@@ -49,6 +49,10 @@
     animation: marquee 60s linear infinite;
   }
 
+  .animate-logo-ticker {
+    animation: logo-ticker 18s linear infinite;
+  }
+
   @keyframes marquee {
     0% {
       transform: translateX(0);
@@ -58,9 +62,23 @@
     }
   }
 
+  @keyframes logo-ticker {
+    0% {
+      transform: translateX(-110%);
+    }
+    100% {
+      transform: translateX(110%);
+    }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .animate-marquee {
       animation: none;
+    }
+
+    .animate-logo-ticker {
+      animation: none;
+      transform: none;
     }
   }
 }
