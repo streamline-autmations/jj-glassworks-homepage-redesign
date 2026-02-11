@@ -24,16 +24,16 @@ export default function ProjectTemplate({
 }) {
   return (
     <div>
-      <section className="pt-32 pb-14 md:pt-40 md:pb-16 bg-secondary ui-reveal">
+      <section className="pt-32 pb-14 md:pt-40 md:pb-16 bg-[#243e95] ui-reveal">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-4">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#4ea6dd] mb-4">
               Completed Project
             </p>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-[1.1] mb-5">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-[1.1] mb-5">
               {title}
             </h1>
-            <p className="text-muted-foreground text-base sm:text-lg leading-relaxed max-w-2xl">
+            <p className="text-white/80 text-base sm:text-lg leading-relaxed max-w-2xl">
               {description}
             </p>
           </div>

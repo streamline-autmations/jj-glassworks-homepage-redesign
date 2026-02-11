@@ -38,7 +38,7 @@ const developments = [
 
 export default function GalleryPreview() {
   return (
-    <section className="py-20 md:py-28 bg-background border-t border-border ui-reveal">
+    <section className="py-16 md:py-24 bg-background border-t border-border ui-reveal">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 max-w-3xl">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight">
@@ -49,13 +49,13 @@ export default function GalleryPreview() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-1">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {developments.map((project, index) => (
             <Link
               key={index}
               href={project.href}
               prefetch={false}
-              className="group relative aspect-[4/3] overflow-hidden block"
+              className="group relative aspect-[4/3] overflow-hidden block rounded-2xl bg-secondary ring-1 ring-border/60 shadow-[0_4px_12px_rgba(10,30,80,0.08)] ui-motion hover:-translate-y-0.5 hover:shadow-[0_18px_60px_rgba(10,30,80,0.14)]"
             >
               <Image
                 src={project.image}
@@ -65,11 +65,10 @@ export default function GalleryPreview() {
                 loading="lazy"
                 sizes="(min-width: 1024px) 33vw, 50vw"
               />
-              <div className="absolute inset-0 bg-black/40 opacity-0 ui-transition group-hover:opacity-100" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 ui-transition group-hover:opacity-100" />
-              <div className="absolute inset-3 border border-white/40 opacity-0 ui-transition group-hover:opacity-100" />
-              <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5 ui-motion opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0">
-                <h4 className="text-xs sm:text-sm md:text-base font-semibold text-white/90 ui-transition group-hover:text-white">
+              <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220_50%_8%/0.75)] via-[hsl(220_50%_8%/0.12)] to-transparent opacity-90 ui-transition group-hover:opacity-80" />
+              <div className="absolute inset-3 border border-white/35 opacity-0 ui-transition group-hover:opacity-100" />
+              <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5">
+                <h4 className="text-sm sm:text-base font-semibold text-white">
                   {project.title}
                 </h4>
               </div>

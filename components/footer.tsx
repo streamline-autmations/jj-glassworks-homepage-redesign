@@ -54,7 +54,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="JJ Glassworks Facebook"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-[hsl(var(--brand-deep))] border-2 border-[hsl(var(--brand-sky))] transition-colors hover:bg-[hsl(var(--brand-sky))] hover:text-white"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-[#4ea6dd] text-white border-2 border-white transition-colors hover:bg-white hover:text-[#4ea6dd] hover:border-[#4ea6dd]"
               >
                 <Facebook className="h-5 w-5" />
               </a>
@@ -63,7 +63,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="JJ Glassworks Instagram"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-[hsl(var(--brand-deep))] border-2 border-[hsl(var(--brand-sky))] transition-colors hover:bg-[hsl(var(--brand-sky))] hover:text-white"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-[#4ea6dd] text-white border-2 border-white transition-colors hover:bg-white hover:text-[#4ea6dd] hover:border-[#4ea6dd]"
               >
                 <Instagram className="h-5 w-5" />
               </a>
@@ -195,7 +195,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="JJ Glassworks Facebook"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-[hsl(var(--brand-deep))] border-2 border-[hsl(var(--brand-sky))] transition-colors hover:bg-[hsl(var(--brand-sky))] hover:text-white"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-[#4ea6dd] text-white border-2 border-white transition-colors hover:bg-white hover:text-[#4ea6dd] hover:border-[#4ea6dd]"
               >
                 <Facebook className="h-5 w-5" />
               </a>
@@ -204,7 +204,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="JJ Glassworks Instagram"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-[hsl(var(--brand-deep))] border-2 border-[hsl(var(--brand-sky))] transition-colors hover:bg-[hsl(var(--brand-sky))] hover:text-white"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-[#4ea6dd] text-white border-2 border-white transition-colors hover:bg-white hover:text-[#4ea6dd] hover:border-[#4ea6dd]"
               >
                 <Instagram className="h-5 w-5" />
               </a>

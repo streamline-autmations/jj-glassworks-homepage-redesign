@@ -30,7 +30,7 @@ export default function Hero() {
           sizes="100vw"
         />
 
-        <div className="absolute inset-0 z-10 bg-[hsl(220_50%_8%/0.60)]" />
+        <div className="absolute inset-0 z-10 bg-[linear-gradient(135deg,hsl(var(--brand-deep)/0.78),hsl(220_50%_8%/0.58),hsl(var(--brand-sky)/0.22))]" />
         <div
           className="absolute inset-y-0 left-0 z-20 w-[72%] max-w-[980px] bg-primary/80"
           style={{ clipPath: "polygon(0 0, 100% 0, 66% 100%, 0% 100%)" }}

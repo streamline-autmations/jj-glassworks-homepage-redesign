@@ -71,7 +71,7 @@ export default function Navigation() {
               alt="JJ Glassworks"
               width={160}
               height={52}
-              className="h-9 md:h-5 w-auto"
+              className="h-7 sm:h-8 md:h-9 w-auto"
               priority
             />
           </Link>

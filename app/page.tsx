@@ -7,6 +7,7 @@ import ClientsCredibility from "@/components/clients-credibility";
 import GalleryPreview from "@/components/gallery-preview";
 import CTASection from "@/components/cta-section";
 import Footer from "@/components/footer";
+import MobileCTA from "@/components/mobile-cta";
 
 export default function HomePage() {
   return (
@@ -15,11 +16,12 @@ export default function HomePage() {
       <Hero />
       <AboutSnapshot />
       <ServicesGrid />
-      <ClientsCredibility />
       <WhyJJ />
+      <ClientsCredibility />
       <GalleryPreview />
       <CTASection />
       <Footer />
+      <MobileCTA />
     </main>
   );
 }

@@ -54,19 +54,35 @@ export default function ContactPage() {
     <main className="min-h-screen pb-14 md:pb-0">
       <Navigation />
 
-      <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-secondary">
+      <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-[#243e95]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-4">
-              Contact
-            </p>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-[1.1] mb-5">
-              Get a Quote
-            </h1>
-            <p className="text-muted-foreground text-base sm:text-lg leading-relaxed max-w-xl">
-              Tell us about your project. We&apos;ll respond quickly with a
-              clear, no-obligation quote.
-            </p>
+          <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
+            <div className="max-w-3xl">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#4ea6dd] mb-4">
+                Contact
+              </p>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-[1.1] mb-5">
+                Visit Us
+              </h1>
+              <p className="text-white/80 text-base sm:text-lg leading-relaxed max-w-xl">
+                Find us on Google Maps for directions and quick access to our office and workshop.
+              </p>
+              <p className="mt-6 text-sm text-white/75 leading-relaxed">
+                57A Loch St, Meyerton
+              </p>
+            </div>
+
+            <div className="overflow-hidden rounded-3xl bg-white ring-1 ring-white/15 shadow-[0_18px_60px_rgba(0,0,0,0.18)]">
+              <div className="relative aspect-[16/10]">
+                <iframe
+                  title="JJ Glassworks location on Google Maps"
+                  src="https://www.google.com/maps?q=57A%20Loch%20St,%20Meyerton&output=embed"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="absolute inset-0 h-full w-full"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
