@@ -32,7 +32,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-primary text-primary-foreground border-t border-white/10 py-14 md:py-16">
+    <footer className="bg-primary text-primary-foreground border-t border-white/10 py-10 md:py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="md:hidden">
           <div>
@@ -45,10 +45,10 @@ export default function Footer() {
                 className="h-10 w-auto brightness-0 invert"
               />
             </Link>
-            <p className="text-base text-white/75 mt-5 leading-relaxed">
+            <p className="text-sm text-white/75 mt-4 leading-relaxed">
               Precision glass and aluminium solutions for residential and commercial projects since 1988.
             </p>
-            <div className="mt-6 flex items-center gap-3">
+            <div className="mt-5 flex items-center gap-3">
               <a
                 href="https://www.facebook.com/people/JJ-Glassworks-CC/61575574604887/"
                 target="_blank"
@@ -70,17 +70,17 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="mt-10 grid grid-cols-1 gap-10">
+          <div className="mt-10 grid grid-cols-2 gap-8">
             <div>
-              <h4 className="text-base font-extrabold tracking-[0.12em] text-white uppercase">
+              <h4 className="text-sm font-extrabold tracking-[0.12em] text-white uppercase">
                 Quick Links
               </h4>
-              <ul className="mt-6 flex flex-col gap-3">
+              <ul className="mt-4 flex flex-col gap-2">
                 {navLinks.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-base text-white/80 hover:text-white transition-colors"
+                      className="text-sm text-white/80 hover:text-white transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -90,15 +90,15 @@ export default function Footer() {
             </div>
 
             <div>
-              <h4 className="text-base font-extrabold tracking-[0.12em] text-white uppercase">
+              <h4 className="text-sm font-extrabold tracking-[0.12em] text-white uppercase">
                 Services
               </h4>
-              <ul className="mt-6 flex flex-col gap-3">
+              <ul className="mt-4 flex flex-col gap-2">
                 {serviceLinks.map((link) => (
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-base text-white/80 hover:text-white transition-colors"
+                      className="text-sm text-white/80 hover:text-white transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -108,15 +108,15 @@ export default function Footer() {
             </div>
 
             <div>
-              <h4 className="text-base font-extrabold tracking-[0.12em] text-white uppercase">
+              <h4 className="text-sm font-extrabold tracking-[0.12em] text-white uppercase">
                 Featured Projects
               </h4>
-              <ul className="mt-6 flex flex-col gap-3">
+              <ul className="mt-4 flex flex-col gap-2">
                 {featuredLinks.map((link) => (
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-base text-white/80 hover:text-white transition-colors"
+                      className="text-sm text-white/80 hover:text-white transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -125,26 +125,26 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div>
-              <h4 className="text-base font-extrabold tracking-[0.12em] text-white uppercase">
+            <div className="col-span-2">
+              <h4 className="text-sm font-extrabold tracking-[0.12em] text-white uppercase">
                 Contact Us
               </h4>
-              <div className="mt-6 border-t border-white/10">
+              <div className="mt-4 border-t border-white/10">
                 {teamContacts.map((member) => (
-                  <div key={member.name} className="py-6 border-b border-white/10">
-                    <p className="text-base font-semibold text-white">{member.name}</p>
-                    <p className="text-sm text-white/65 mt-1">{member.role}</p>
-                    <div className="mt-4 flex flex-col gap-3">
+                  <div key={member.name} className="py-5 border-b border-white/10">
+                    <p className="text-sm font-semibold text-white">{member.name}</p>
+                    <p className="text-xs text-white/65 mt-1">{member.role}</p>
+                    <div className="mt-3 flex flex-col gap-2.5">
                       <a
                         href={`tel:${member.phone}`}
-                        className="flex items-start gap-3 text-base text-white/80 hover:text-white transition-colors"
+                        className="flex items-start gap-3 text-sm text-white/80 hover:text-white transition-colors"
                       >
                         <Phone className="h-4 w-4 mt-0.5 flex-shrink-0 text-[hsl(var(--brand-sky))]" />
                         <span className="text-white/80">{member.phoneDisplay}</span>
                       </a>
                       <a
                         href={`mailto:${member.email}`}
-                        className="flex items-start gap-3 text-base text-white/80 hover:text-white transition-colors"
+                        className="flex items-start gap-3 text-sm text-white/80 hover:text-white transition-colors"
                       >
                         <Mail className="h-4 w-4 mt-0.5 flex-shrink-0 text-[hsl(var(--brand-sky))]" />
                         <span className="text-white/80">{member.email}</span>
@@ -154,7 +154,7 @@ export default function Footer() {
                 ))}
               </div>
 
-              <div className="mt-7">
+              <div className="mt-5">
                 <a
                   href="https://maps.google.com/?q=57A%20Loch%20St,%20Meyerton"
                   target="_blank"
@@ -168,8 +168,8 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="mt-12 pt-8 border-t border-white/10">
-            <p className="text-sm text-white/65">
+          <div className="mt-10 pt-6 border-t border-white/10">
+            <p className="text-xs text-white/65">
               {`\u00A9 ${currentYear} JJ Glassworks. All rights reserved.`}
             </p>
           </div>

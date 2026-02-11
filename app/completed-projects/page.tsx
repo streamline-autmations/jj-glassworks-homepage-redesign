@@ -19,7 +19,7 @@ export default function CompletedProjectsPage() {
   }, [activeCategory]);
 
   return (
-    <main className="min-h-screen pb-14 md:pb-0">
+    <main className="min-h-screen">
       <Navigation />
 
       <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-[#243e95] ui-reveal">

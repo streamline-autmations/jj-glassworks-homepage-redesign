@@ -5,7 +5,7 @@ import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import MobileCTA from "@/components/mobile-cta";
 import { buttonClassName } from "@/components/ui/button";
-import { CheckCircle, MessageCircle } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Services | JJ Glassworks",
@@ -224,7 +224,7 @@ export default function ServicesPage() {
   const whatsappNumber = "27163621797";
 
   return (
-    <main className="min-h-screen pb-14 md:pb-0">
+    <main className="min-h-screen">
       <Navigation />
 
       <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-[#243e95]">
@@ -249,10 +249,6 @@ export default function ServicesPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-10">
             {services.map((service) => {
-              const whatsappHref = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-                `Hi JJ Glassworks, I'd like a quote for ${service.title}.`
-              )}`;
-
               return (
                 <article
                   key={service.title}
@@ -305,33 +301,6 @@ export default function ServicesPage() {
                       <p className="mt-1 text-sm text-white/85 leading-relaxed">
                         {service.whyUs}
                       </p>
-                    </div>
-
-                    <div className="mt-7 flex flex-col sm:flex-row gap-3">
-                      <Link
-                        href="/contact"
-                        className={buttonClassName({
-                          variant: "primary",
-                          size: "md",
-                          className:
-                            "border-[#4ea6dd] bg-[#4ea6dd] text-white hover:bg-transparent hover:text-[#4ea6dd] hover:border-[#4ea6dd]",
-                        })}
-                      >
-                        Get a Quote
-                      </Link>
-                      <a
-                        href={whatsappHref}
-                        target="_blank"
-                        rel="noreferrer"
-                        className={buttonClassName({
-                          variant: "inverseOutline",
-                          size: "md",
-                          className: "gap-2 border-white/75 hover:text-[#243e95]",
-                        })}
-                      >
-                        <MessageCircle className="h-4 w-4" />
-                        WhatsApp
-                      </a>
                     </div>
                   </div>
                 </article>
