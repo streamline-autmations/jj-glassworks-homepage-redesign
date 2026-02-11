@@ -18,7 +18,7 @@ export default function CTASection() {
     ].filter(Boolean);
 
     const text = encodeURIComponent(lines.join("\n"));
-    return `https://wa.me/27163621797?text=${text}`;
+    return `https://wa.me/27824595073?text=${text}`;
   }, [email, name, projectType]);
 
   return (

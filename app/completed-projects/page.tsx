@@ -59,7 +59,7 @@ export default function CompletedProjectsPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-background ui-reveal">
+      <section className="py-12 md:py-16 bg-background ui-reveal">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredProjects.map((project) => (

@@ -149,7 +149,7 @@ export default async function CompletedProjectDetailPage({
                   Get a Quote
                 </Link>
                 <a
-                  href="https://wa.me/27163621797"
+                  href="https://wa.me/27824595073"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={buttonClassName({

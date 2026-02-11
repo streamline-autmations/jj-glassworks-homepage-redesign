@@ -221,7 +221,7 @@ function ServiceIcon({ title }: { title: string }) {
 }
 
 export default function ServicesPage() {
-  const whatsappNumber = "27163621797";
+  const whatsappNumber = "27824595073";
 
   return (
     <main className="min-h-screen">
@@ -255,7 +255,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-14 md:py-24 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-10">
             {services.map((service) => {
@@ -320,14 +320,14 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="py-20 md:py-28 bg-white border-t border-[#243e95]/10">
+      <section className="py-14 md:py-24 bg-white border-t border-[#243e95]/10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mx-auto text-center">
-            <div className="w-12 h-1 bg-[#4ea6dd] mx-auto mb-8" />
+            <div className="w-12 h-1 bg-[#4ea6dd] mx-auto mb-6 md:mb-8" />
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#243e95] leading-tight mb-5">
               Ready to Get Started?
             </h2>
-            <p className="text-[#243e95]/75 mb-10 max-w-lg mx-auto leading-relaxed">
+            <p className="text-[#243e95]/75 mb-8 md:mb-10 max-w-lg mx-auto leading-relaxed">
               Contact us today for a free quote. We&apos;ll respond quickly and
               work to your schedule.
             </p>

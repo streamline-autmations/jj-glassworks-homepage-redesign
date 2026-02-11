@@ -78,9 +78,9 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="py-12 md:py-16 bg-background">
+      <section className="py-10 md:py-14 bg-background">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-10 md:gap-14">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
             <div>
               <div
                 className={cardClassName({
@@ -231,27 +231,27 @@ export default function ContactPage() {
                 Prefer to chat? Reach us on WhatsApp, phone, or email.
               </p>
 
-              <div className="mt-8 flex flex-col gap-5">
+              <div className="mt-6 flex flex-col gap-5">
                 <a
-                  href="https://wa.me/27163621797"
+                  href="https://wa.me/27824595073"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={cardClassName({
                     variant: "panel",
-                    padding: "md",
+                    padding: "sm",
                     className:
                       "bg-[#243e95] text-white ring-1 ring-white/10 shadow-[0_18px_60px_rgba(10,30,80,0.18)] ui-transition md:hover:-translate-y-0.5 md:hover:shadow-[0_26px_72px_rgba(10,30,80,0.22)]",
                   })}
                 >
-                  <div className="flex items-center gap-5">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-3xl bg-white/10">
-                      <MessageCircle className="h-7 w-7 text-white" />
+                  <div className="flex items-center gap-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-3xl bg-white/10">
+                      <MessageCircle className="h-6 w-6 text-white" />
                     </div>
                     <div className="flex-1">
                       <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/70">
                         WhatsApp
                       </p>
-                      <p className="mt-1 text-lg font-semibold text-white">
+                      <p className="mt-1 text-base sm:text-lg font-semibold text-white">
                         Message Us
                       </p>
                       <p className="mt-2 text-sm text-white/80">
@@ -265,20 +265,20 @@ export default function ContactPage() {
                   href="tel:0163621797"
                   className={cardClassName({
                     variant: "panel",
-                    padding: "md",
+                    padding: "sm",
                     className:
                       "bg-[#243e95] text-white ring-1 ring-white/10 shadow-[0_18px_60px_rgba(10,30,80,0.18)] ui-transition md:hover:-translate-y-0.5 md:hover:shadow-[0_26px_72px_rgba(10,30,80,0.22)]",
                   })}
                 >
-                  <div className="flex items-center gap-5">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-3xl bg-white/10">
-                      <Phone className="h-7 w-7 text-white" />
+                  <div className="flex items-center gap-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-3xl bg-white/10">
+                      <Phone className="h-6 w-6 text-white" />
                     </div>
                     <div className="flex-1">
                       <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/70">
                         Call
                       </p>
-                      <p className="mt-1 text-lg font-semibold text-white">
+                      <p className="mt-1 text-base sm:text-lg font-semibold text-white">
                         016 362 1797
                       </p>
                       <p className="mt-2 text-sm text-white/80">
@@ -292,20 +292,20 @@ export default function ContactPage() {
                   href="mailto:jjglass01@mweb.co.za"
                   className={cardClassName({
                     variant: "panel",
-                    padding: "md",
+                    padding: "sm",
                     className:
                       "bg-[#243e95] text-white ring-1 ring-white/10 shadow-[0_18px_60px_rgba(10,30,80,0.18)] ui-transition md:hover:-translate-y-0.5 md:hover:shadow-[0_26px_72px_rgba(10,30,80,0.22)]",
                   })}
                 >
-                  <div className="flex items-center gap-5">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-3xl bg-white/10">
-                      <Mail className="h-7 w-7 text-white" />
+                  <div className="flex items-center gap-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-3xl bg-white/10">
+                      <Mail className="h-6 w-6 text-white" />
                     </div>
                     <div className="flex-1">
                       <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/70">
                         Email
                       </p>
-                      <p className="mt-1 text-lg font-semibold text-white">
+                      <p className="mt-1 text-base sm:text-lg font-semibold text-white">
                         jjglass01@mweb.co.za
                       </p>
                       <p className="mt-2 text-sm text-white/80">
@@ -345,7 +345,7 @@ export default function ContactPage() {
 
       <Footer />
       <a
-        href="https://wa.me/27163621797"
+        href="https://wa.me/27824595073"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#4ea6dd] text-white shadow-[0_18px_60px_rgba(10,30,80,0.22)] ring-1 ring-[#4ea6dd]/40 ui-motion hover:-translate-y-0.5 hover:shadow-[0_26px_72px_rgba(10,30,80,0.28)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"

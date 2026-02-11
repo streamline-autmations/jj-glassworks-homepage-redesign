@@ -40,7 +40,7 @@ export default function ProjectTemplate({
         </div>
       </section>
 
-      <section className="py-8 bg-background border-b border-border ui-reveal">
+      <section className="py-6 bg-background border-b border-border ui-reveal">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className={cardClassName({ variant: "panel", padding: "sm" })}>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -73,7 +73,7 @@ export default function ProjectTemplate({
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-background ui-reveal">
+      <section className="py-12 md:py-16 bg-background ui-reveal">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {images.map((image) => (
@@ -95,7 +95,7 @@ export default function ProjectTemplate({
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-secondary border-t border-border ui-reveal">
+      <section className="py-12 md:py-16 bg-secondary border-t border-border ui-reveal">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground leading-tight">
@@ -112,7 +112,7 @@ export default function ProjectTemplate({
                 Get a Quote
               </Link>
               <a
-                href="https://wa.me/27163621797"
+                href="https://wa.me/27824595073"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={buttonClassName({

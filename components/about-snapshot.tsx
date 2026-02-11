@@ -5,7 +5,7 @@ export default function AboutSnapshot() {
     <section className="py-20 md:py-28 bg-background ui-reveal">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-          <div className="relative aspect-video w-full overflow-hidden rounded-3xl bg-background shadow-sm ring-1 ring-border/60">
+          <div className="relative aspect-[16/11] md:aspect-video w-full overflow-hidden rounded-3xl bg-background shadow-sm ring-1 ring-border/60">
             <Image
               src="https://res.cloudinary.com/dnlgohkcc/image/upload/v1770740856/Untitled_20design_upscayl_8x_jd9mlb.jpg"
               alt="JJ Glassworks workshop and installations"
