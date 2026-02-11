@@ -13,7 +13,7 @@ const developments = [
   {
     title: "I&S Motors",
     image:
-      "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770716577/imgi_33_24d77577fe36f8e1a58b9a92278d3ae2_upscayl_4x_zxx6u3.jpg",
+      "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770796284/SHOPFRONTS_fyjqxp.jpg",
     href: "/completed-projects/is-motors",
   },
   {
@@ -64,10 +64,10 @@ export default function GalleryPreview() {
                 loading="lazy"
                 sizes="(min-width: 1024px) 33vw, 50vw"
               />
-              <div className="absolute inset-0 bg-black/25 opacity-0 ui-transition group-hover:opacity-100" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+              <div className="absolute inset-0 bg-black/40 opacity-0 ui-transition group-hover:opacity-100" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 ui-transition group-hover:opacity-100" />
               <div className="absolute inset-3 border border-white/40 opacity-0 ui-transition group-hover:opacity-100" />
-              <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5 ui-motion group-hover:-translate-y-1">
+              <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5 ui-motion opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0">
                 <h4 className="text-xs sm:text-sm md:text-base font-semibold text-white/90 ui-transition group-hover:text-white">
                   {project.title}
                 </h4>

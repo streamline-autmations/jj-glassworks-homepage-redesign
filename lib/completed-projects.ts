@@ -33,16 +33,45 @@ export type ResidentialHighlightsProject = {
 
 export type CompletedProject = BusinessProject | ResidentialHighlightsProject;
 
-const PROJECT_IMAGE_LIONS_PRIDE =
-  "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770716760/imgi_30_a332d58ef863ecc1b53a78e53d167caa_upscayl_8x_hmqrlk.jpg";
-const PROJECT_IMAGE_KIEPERSOL =
-  "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770715648/imgi_11_342443b7a28b3548c90ec838ef528f54_upscayl_4x_c9qica.jpg";
-const PROJECT_IMAGE_IS_MOTORS =
-  "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770716577/imgi_33_24d77577fe36f8e1a58b9a92278d3ae2_upscayl_4x_zxx6u3.jpg";
-const PROJECT_IMAGE_SHIELD_SA =
-  "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770716875/imgi_17_2564cdef103459a5f155dc82bb349b2f_upscayl_8x_zdtq1x.jpg";
-const PROJECT_IMAGE_SOLID_BUILD =
-  "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770716918/imgi_23_af5b59174e10a8d12b9061431ea4ce26_upscayl_8x_smr2dy.jpg";
+const LIONS_PRIDE_IMAGES = [
+  "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770716764/imgi_32_5947516a6956b83d2c093275857f5449_upscayl_8x_dwh4gh.jpg",
+  "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770716762/imgi_31_a072e685090676717eb4b4aca727c5ba_upscayl_8x_h2oysq.jpg",
+  "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770716760/imgi_30_a332d58ef863ecc1b53a78e53d167caa_upscayl_8x_hmqrlk.jpg",
+];
+
+const KIEPERSOL_IMAGES = [
+  "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770715647/imgi_9_a448e5c8b2ca7718b9f435219d4abc99_upscayl_4x_y7ruwu.jpg",
+  "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770715648/imgi_11_342443b7a28b3548c90ec838ef528f54_upscayl_4x_c9qica.jpg",
+  "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770715648/imgi_10_e0b587995ccf782be799c270eba13ef6_upscayl_4x_wskhaf.jpg",
+  "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770715650/imgi_12_d689358fea4d44aa9fdae64af1483383_upscayl_4x_b9r0jn.jpg",
+  "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770715652/imgi_13_6f5a22b1866fb2ddda0267c7e05d0784_upscayl_4x_gsfsq9.jpg",
+  "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770715654/imgi_14_50d83bd72b4e7aa7587486ec7ccffb1f_upscayl_4x_a8nedz.jpg",
+  "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770715656/imgi_15_4d3131d6b22cec158706b0583c363fe4_upscayl_4x_m5cn95.jpg",
+  "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770715658/imgi_16_b57389fa9a219f6816b0b3594c7d6208_upscayl_4x_m38ngt.jpg",
+];
+
+const IS_MOTORS_IMAGES = [
+  "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770796284/SHOPFRONTS_fyjqxp.jpg",
+  "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770716577/imgi_33_24d77577fe36f8e1a58b9a92278d3ae2_upscayl_4x_zxx6u3.jpg",
+  "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770716580/imgi_36_3b89b4c225ce023b4bebbca5a017dc0e_upscayl_4x_rrvafn.jpg",
+];
+
+const SHIELD_SA_IMAGES = [
+  "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770716875/imgi_17_2564cdef103459a5f155dc82bb349b2f_upscayl_8x_zdtq1x.jpg",
+  "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770716877/imgi_18_cb0bba61e887801e0954ac97b0ada6ca_upscayl_8x_swhzwj.jpg",
+  "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770716878/imgi_19_48ce98327e7ec1f4d954c218430cc14d_upscayl_8x_dyehuu.jpg",
+  "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770716881/imgi_20_a2e1a0195be54f2f890239de5a21fa93_upscayl_8x_qdtfqc.jpg",
+  "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770716884/imgi_21_edfe7beb52eacee75a7f1a3b284e02aa_upscayl_8x_uxkgww.jpg",
+  "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770716885/imgi_22_1344724d7835b14f6dc6bdeb0a214f60_upscayl_8x_netv6t.jpg",
+];
+
+const SOLID_BUILD_IMAGES = [
+  "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770716918/imgi_23_af5b59174e10a8d12b9061431ea4ce26_upscayl_8x_smr2dy.jpg",
+  "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770716920/imgi_24_4b8c38d8e8488c577a08a8a4e1d6bfdd_upscayl_8x_v5qwua.jpg",
+  "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770716925/imgi_26_85c8f24d9da870a1a25eb6f09106ac96_upscayl_8x_oesc7e.jpg",
+  "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770716925/imgi_25_34c15996965639c0b5171bbb4a490515_upscayl_8x_k6ncsb.jpg",
+  "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770716927/imgi_27_1590de6fe3880c6ac1125de1a8857c8b_upscayl_8x_pch3m4.jpg",
+];
 
 const RESIDENTIAL_DOORS =
   "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770725348/DOORS_jgtpmv.jpg";
@@ -68,13 +97,8 @@ export const completedProjects: CompletedProject[] = [
       area: "Gauteng",
       scope: "Shopfront glazing, doors, and finishing work",
     },
-    coverImage: PROJECT_IMAGE_LIONS_PRIDE,
-    images: [
-      PROJECT_IMAGE_LIONS_PRIDE,
-      PROJECT_IMAGE_KIEPERSOL,
-      PROJECT_IMAGE_IS_MOTORS,
-      PROJECT_IMAGE_LIONS_PRIDE,
-    ],
+    coverImage: LIONS_PRIDE_IMAGES[0],
+    images: LIONS_PRIDE_IMAGES,
   },
   {
     slug: "kiepersol",
@@ -86,13 +110,8 @@ export const completedProjects: CompletedProject[] = [
       area: "Gauteng",
       scope: "Aluminium glazing, fitting, and site finishing",
     },
-    coverImage: PROJECT_IMAGE_KIEPERSOL,
-    images: [
-      PROJECT_IMAGE_KIEPERSOL,
-      PROJECT_IMAGE_LIONS_PRIDE,
-      PROJECT_IMAGE_SOLID_BUILD,
-      PROJECT_IMAGE_KIEPERSOL,
-    ],
+    coverImage: KIEPERSOL_IMAGES[0],
+    images: KIEPERSOL_IMAGES,
   },
   {
     slug: "shield-sa",
@@ -104,15 +123,8 @@ export const completedProjects: CompletedProject[] = [
       area: "Gauteng",
       scope: "Industrial glazing, aluminium systems, and compliance finish",
     },
-    coverImage: PROJECT_IMAGE_SHIELD_SA,
-    images: [
-      PROJECT_IMAGE_SHIELD_SA,
-      PROJECT_IMAGE_SOLID_BUILD,
-      PROJECT_IMAGE_IS_MOTORS,
-      PROJECT_IMAGE_KIEPERSOL,
-      PROJECT_IMAGE_SHIELD_SA,
-      PROJECT_IMAGE_LIONS_PRIDE,
-    ],
+    coverImage: SHIELD_SA_IMAGES[0],
+    images: SHIELD_SA_IMAGES,
   },
   {
     slug: "solid-build",
@@ -124,15 +136,8 @@ export const completedProjects: CompletedProject[] = [
       area: "Gauteng",
       scope: "Supply, install, and site coordination",
     },
-    coverImage: PROJECT_IMAGE_SOLID_BUILD,
-    images: [
-      PROJECT_IMAGE_SOLID_BUILD,
-      PROJECT_IMAGE_SHIELD_SA,
-      PROJECT_IMAGE_IS_MOTORS,
-      PROJECT_IMAGE_LIONS_PRIDE,
-      PROJECT_IMAGE_SOLID_BUILD,
-      PROJECT_IMAGE_KIEPERSOL,
-    ],
+    coverImage: SOLID_BUILD_IMAGES[0],
+    images: SOLID_BUILD_IMAGES,
   },
   {
     slug: "is-motors",
@@ -144,15 +149,8 @@ export const completedProjects: CompletedProject[] = [
       area: "Gauteng",
       scope: "Glazing, doors, and durable installation work",
     },
-    coverImage: PROJECT_IMAGE_IS_MOTORS,
-    images: [
-      PROJECT_IMAGE_IS_MOTORS,
-      PROJECT_IMAGE_SOLID_BUILD,
-      PROJECT_IMAGE_SHIELD_SA,
-      PROJECT_IMAGE_KIEPERSOL,
-      PROJECT_IMAGE_IS_MOTORS,
-      PROJECT_IMAGE_LIONS_PRIDE,
-    ],
+    coverImage: IS_MOTORS_IMAGES[0],
+    images: IS_MOTORS_IMAGES,
   },
   {
     slug: "residential",
@@ -195,4 +193,3 @@ export const projectCategories: Array<"All" | ProjectCategory> = [
 export function getCompletedProjectBySlug(slug: string) {
   return completedProjects.find((project) => project.slug === slug);
 }
-

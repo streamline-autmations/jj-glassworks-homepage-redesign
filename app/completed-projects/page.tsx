@@ -77,10 +77,10 @@ export default function CompletedProjectsPage() {
                     className="object-cover ui-motion md:group-hover:scale-[1.02]"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-[hsl(220_50%_8%/0.55)] opacity-0 ui-motion md:group-hover:opacity-100" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220_50%_8%/0.82)] via-[hsl(220_50%_8%/0.22)] to-transparent opacity-100 md:opacity-0 ui-motion md:group-hover:opacity-100" />
+                  <div className="absolute inset-0 bg-[hsl(220_50%_8%/0.4)] opacity-0 ui-motion group-hover:opacity-100" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220_50%_8%/0.7)] via-transparent to-transparent opacity-0 ui-motion group-hover:opacity-100" />
 
-                  <div className="absolute inset-x-0 bottom-0 p-5 ui-motion opacity-100 translate-y-0 md:opacity-0 md:translate-y-3 md:group-hover:opacity-100 md:group-hover:translate-y-0">
+                  <div className="absolute inset-x-0 bottom-0 p-5 ui-motion opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0">
                     <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/70">
                       {project.category}
                     </p>

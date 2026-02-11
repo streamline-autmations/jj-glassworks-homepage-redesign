@@ -3,9 +3,8 @@ import type { Metadata } from "next";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import MobileCTA from "@/components/mobile-cta";
-import { Square, DoorOpen, Store, Droplets, Scissors, Wrench, CheckCircle } from "lucide-react";
 import { buttonClassName } from "@/components/ui/button";
-import { cardClassName } from "@/components/ui/card";
+import ServiceBlock from "@/components/services/service-block";
 
 export const metadata: Metadata = {
   title: "Services | JJ Glassworks",
@@ -15,9 +14,10 @@ export const metadata: Metadata = {
 
 const services = [
   {
-    icon: Square,
     title: "Aluminium Windows",
     description: "Energy-efficient windows built for South African conditions",
+    imageSrc:
+      "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770725361/WINDOWS_dlvucn.jpg",
     details: [
       "Fixed, sliding, and top-hung configurations",
       "Powder-coated finishes in any colour",
@@ -28,9 +28,10 @@ const services = [
     whyUs: "In-house fabrication means quality control and faster delivery.",
   },
   {
-    icon: DoorOpen,
     title: "Aluminium Doors",
     description: "Sliding, hinged, and stacking doors for any opening",
+    imageSrc:
+      "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770725348/DOORS_jgtpmv.jpg",
     details: [
       "Sliding doors for seamless indoor-outdoor flow",
       "Hinged doors for entrances and rooms",
@@ -41,9 +42,10 @@ const services = [
     whyUs: "Expert installation with precise fitting and smooth operation.",
   },
   {
-    icon: Store,
     title: "Aluminium Shopfronts",
     description: "Commercial storefronts that make an impression",
+    imageSrc:
+      "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770725355/SHOPFRONTS_ysq4ma.jpg",
     details: [
       "Complete shopfront systems",
       "Automatic and manual door options",
@@ -54,9 +56,10 @@ const services = [
     whyUs: "Minimal disruption to your business with efficient installation.",
   },
   {
-    icon: Droplets,
     title: "Shower Panels & Bathroom Glass",
     description: "Frameless and semi-frameless enclosures",
+    imageSrc:
+      "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770725362/Showers_kxlaod.jpg",
     details: [
       "Frameless shower screens for modern bathrooms",
       "Semi-frameless options with stability",
@@ -67,9 +70,10 @@ const services = [
     whyUs: "Clean installations with attention to waterproofing and finish.",
   },
   {
-    icon: Scissors,
     title: "Glass Cut to Size",
     description: "Custom glass cutting for any project",
+    imageSrc:
+      "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770725350/MIRRORS_bmyg6e.jpg",
     details: [
       "Tabletops and shelving",
       "Replacement window panes",
@@ -80,9 +84,10 @@ const services = [
     whyUs: "Precision cutting to exact specifications with fast turnaround.",
   },
   {
-    icon: Wrench,
     title: "Putty Repairs & Glazing",
     description: "Traditional glazing and repair services",
+    imageSrc:
+      "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770725361/WINDOWS_dlvucn.jpg",
     details: [
       "Putty removal and re-glazing",
       "Cracked glass replacement",
@@ -118,69 +123,19 @@ export default function ServicesPage() {
       </section>
 
       <section className="py-20 md:py-28 bg-background">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col gap-20 md:gap-24">
-          {services.map((service, index) => {
-            const Icon = service.icon;
-            const isEven = index % 2 === 0;
-
-            return (
-              <div
-                key={index}
-                className="grid lg:grid-cols-2 gap-10 md:gap-16 items-start"
-              >
-                <div className={isEven ? "lg:order-1" : "lg:order-2"}>
-                  <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 shadow-sm ring-1 ring-primary/15">
-                    <Icon className="h-6 w-6 text-primary" />
-                  </div>
-                  <h2 className="text-2xl md:text-3xl font-bold text-foreground leading-tight mb-4">
-                    {service.title}
-                  </h2>
-                  <p className="text-muted-foreground mb-8 leading-relaxed">
-                    {service.description}
-                  </p>
-
-                  <div className="flex flex-col gap-3 mb-8">
-                    {service.details.map((detail, i) => (
-                      <div key={i} className="flex items-start gap-3">
-                        <CheckCircle className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-muted-foreground">{detail}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <Link
-                    href="/contact"
-                    className={buttonClassName({ variant: "primary", size: "lg" })}
-                  >
-                    Get a Quote
-                  </Link>
-                </div>
-
-                <div
-                  className={cardClassName({
-                    variant: "accent",
-                    padding: "md",
-                    className: isEven ? "lg:order-2" : "lg:order-1",
-                  })}
-                >
-                  <div className="flex flex-col gap-8">
-                    <div>
-                      <p className="text-xs font-semibold uppercase tracking-[0.15em] text-primary/60 mb-2">
-                        WHO IT&apos;S FOR
-                      </p>
-                      <p className="text-foreground text-sm leading-relaxed">{service.forWho}</p>
-                    </div>
-                    <div className="border-t border-primary/10 pt-6">
-                      <p className="text-xs font-semibold uppercase tracking-[0.15em] text-primary/60 mb-2">
-                        WHY JJ GLASSWORKS
-                      </p>
-                      <p className="text-foreground text-sm leading-relaxed">{service.whyUs}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col gap-16 md:gap-20 lg:gap-24">
+          {services.map((service, index) => (
+            <ServiceBlock
+              key={service.title}
+              title={service.title}
+              description={service.description}
+              bullets={service.details}
+              imageSrc={service.imageSrc}
+              whoItsFor={service.forWho}
+              whyJJ={service.whyUs}
+              desktopImageLeft={index % 2 === 1}
+            />
+          ))}
         </div>
       </section>
 
