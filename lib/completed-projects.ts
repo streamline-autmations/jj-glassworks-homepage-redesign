@@ -157,28 +157,34 @@ export const completedProjects: CompletedProject[] = [
     title: "Residential Highlights",
     category: "Residential",
     description: "A curated snapshot of our residential glass and aluminium work.",
-    coverImage: RESIDENTIAL_SHOWERS,
+    coverImage:
+      "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770800318/Untitled_design_1_jlawsc.jpg",
     beforeAfterSections: [
       {
-        title: "Shower Upgrades",
-        beforeImage: RESIDENTIAL_SHOWERS,
-        afterImage: RESIDENTIAL_SHOWERS,
-        note: "Clean lines, precise fitment, and a premium finish.",
+        title: "Architectural Sliding Door Installation",
+        beforeImage:
+          "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770799731/before_after_rfjksl.jpg",
+        afterImage:
+          "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770799729/before_after_1_zo5v1x.jpg",
+        note: "Precision-fitted aluminium sliding system for modern living.",
       },
       {
-        title: "Doors & Openings",
-        beforeImage: RESIDENTIAL_DOORS,
-        afterImage: RESIDENTIAL_DOORS,
-        note: "Improved airflow, security, and everyday usability.",
+        title: "Custom Aluminium Window Installation",
+        beforeImage:
+          "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770799728/before_after_2_osegxc.jpg",
+        afterImage:
+          "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770799730/before_after_3_ur9wim.jpg",
+        note: "Energy-efficient aluminium windows built for durability and style.",
       },
     ],
     galleryImages: [
-      RESIDENTIAL_SHOWERS,
-      RESIDENTIAL_DOORS,
-      RESIDENTIAL_MIRRORS,
-      RESIDENTIAL_WINDOWS,
-      RESIDENTIAL_BALUSTRADES,
-      RESIDENTIAL_SHOPFRONTS,
+      "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770800318/Untitled_design_1_jlawsc.jpg",
+      "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770800319/Untitled_design_3_o2w1o6.jpg",
+      "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770800320/Untitled_design_2_jcfwfz.jpg",
+      "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770800320/Untitled_design_4_keilsr.jpg",
+      "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770800322/Untitled_design_5_p3oebr.jpg",
+      "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770800324/Untitled_design_6_tij3kg.jpg",
+      "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770800325/Untitled_design_7_qacbmo.jpg",
     ],
   },
 ];
