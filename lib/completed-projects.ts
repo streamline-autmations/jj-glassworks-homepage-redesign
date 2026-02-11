@@ -179,8 +179,6 @@ export const completedProjects: CompletedProject[] = [
     ],
     galleryImages: [
       "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770800318/Untitled_design_1_jlawsc.jpg",
-      "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770800319/Untitled_design_3_o2w1o6.jpg",
-      "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770800320/Untitled_design_2_jcfwfz.jpg",
       "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770800320/Untitled_design_4_keilsr.jpg",
       "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770800322/Untitled_design_5_p3oebr.jpg",
       "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770800324/Untitled_design_6_tij3kg.jpg",
