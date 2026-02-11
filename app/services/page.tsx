@@ -227,16 +227,26 @@ export default function ServicesPage() {
     <main className="min-h-screen">
       <Navigation />
 
-      <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-[#243e95]">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden pt-24 pb-10 md:pt-28 md:pb-12 bg-[#243e95]">
+         <Image
+           src="https://res.cloudinary.com/dnlgohkcc/image/upload/v1770811605/hero_image_2560x1080_xdgm7g.png"
+           alt=""
+           fill
+           priority
+           className="object-cover opacity-40"
+           sizes="100vw"
+         />
+         <div className="absolute inset-0 bg-[#243e95]/60" />
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#4ea6dd] mb-4">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)] mb-4">
               What We Do
             </p>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-[1.1] mb-5">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)] leading-[1.1] mb-5">
               Our Services
             </h1>
-            <p className="text-white/80 text-base sm:text-lg leading-relaxed max-w-xl">
+            <p className="text-white/85 drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)] text-base sm:text-lg leading-relaxed max-w-xl">
               From aluminium windows and doors to custom glass cutting, we
               provide professional fabrication and installation services for
               residential and industrial clients.

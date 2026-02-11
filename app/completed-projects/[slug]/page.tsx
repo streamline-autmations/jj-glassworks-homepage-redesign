@@ -26,7 +26,7 @@ export default async function CompletedProjectDetailPage({
       <main className="min-h-screen">
         <Navigation />
 
-        <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-[#243e95] ui-reveal">
+        <section className="pt-24 pb-10 md:pt-28 md:pb-12 bg-[#243e95] ui-reveal">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#4ea6dd] mb-4">
