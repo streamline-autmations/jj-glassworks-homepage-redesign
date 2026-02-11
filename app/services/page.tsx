@@ -334,6 +334,7 @@ export default function ServicesPage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link
                 href="/contact"
+                prefetch={false}
                 className={buttonClassName({
                   variant: "primary",
                   size: "lg",

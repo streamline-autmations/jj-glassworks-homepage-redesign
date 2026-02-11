@@ -164,6 +164,7 @@ function ServiceCard({ service, delayMs }: { service: Service; delayMs: number }
   return (
     <Link
       href="/services"
+      prefetch={false}
       className="group block overflow-hidden rounded-2xl bg-background shadow-[0_4px_12px_rgba(10,30,80,0.10)] ring-1 ring-border/60 ui-motion ui-transition-shadow hover:-translate-y-0.5 hover:shadow-[0_18px_60px_rgba(10,30,80,0.14)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-secondary ui-reveal"
       data-reveal-delay={delayMs}
     >

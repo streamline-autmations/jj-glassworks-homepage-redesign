@@ -51,6 +51,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-3 mb-8">
               <Link
                 href="/contact"
+                prefetch={false}
                 className={buttonClassName({ variant: "white", size: "lg" })}
               >
                 Get a Quote

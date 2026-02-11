@@ -144,6 +144,7 @@ export default async function CompletedProjectDetailPage({
               <div className="mt-8 flex flex-col sm:flex-row gap-3">
                 <Link
                   href="/contact"
+                  prefetch={false}
                   className={buttonClassName({ variant: "primary", size: "lg" })}
                 >
                   Get a Quote

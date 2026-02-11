@@ -36,7 +36,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="md:hidden">
           <div>
-            <Link href="/" className="inline-flex items-center">
+            <Link href="/" prefetch={false} className="inline-flex items-center">
               <Image
                 src="https://res.cloudinary.com/dnlgohkcc/image/upload/v1770741423/Untitled_design_58_r6mfhp.png"
                 alt="JJ Glassworks"
@@ -80,6 +80,7 @@ export default function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
+                      prefetch={false}
                       className="text-sm text-white/80 hover:text-white transition-colors"
                     >
                       {link.label}
@@ -98,6 +99,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <Link
                       href={link.href}
+                      prefetch={false}
                       className="text-sm text-white/80 hover:text-white transition-colors"
                     >
                       {link.label}
@@ -116,6 +118,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <Link
                       href={link.href}
+                      prefetch={false}
                       className="text-sm text-white/80 hover:text-white transition-colors"
                     >
                       {link.label}
@@ -177,7 +180,7 @@ export default function Footer() {
 
         <div className="hidden md:grid gap-12 md:grid-cols-12">
           <div className="max-w-md md:col-span-5">
-            <Link href="/" className="inline-flex items-center">
+            <Link href="/" prefetch={false} className="inline-flex items-center">
               <Image
                 src="https://res.cloudinary.com/dnlgohkcc/image/upload/v1770741423/Untitled_design_58_r6mfhp.png"
                 alt="JJ Glassworks"
@@ -220,7 +223,8 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                      className="text-base text-white/80 hover:text-white transition-colors"
+                    prefetch={false}
+                    className="text-base text-white/80 hover:text-white transition-colors"
                   >
                     {link.label}
                   </Link>

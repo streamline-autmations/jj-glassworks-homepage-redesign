@@ -12,6 +12,7 @@ export default function NotFound() {
         </p>
         <Link
           href="/"
+          prefetch={false}
           className="inline-flex items-center justify-center bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
         >
           Return Home

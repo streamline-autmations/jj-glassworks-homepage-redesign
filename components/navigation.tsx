@@ -65,7 +65,7 @@ export default function Navigation() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center gap-4">
         <div className="flex items-center shrink-0">
-          <Link href="/" className="flex items-center">
+          <Link href="/" prefetch={false} className="flex items-center">
             <Image
               src="https://res.cloudinary.com/dnlgohkcc/image/upload/v1770741423/Untitled_design_58_r6mfhp.png"
               alt="JJ Glassworks"
@@ -83,6 +83,7 @@ export default function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
+                prefetch={false}
                 className={`relative text-xs font-semibold uppercase tracking-[0.18em] ui-transition-colors after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-primary after:transition-transform after:duration-200 after:[transition-timing-function:var(--ui-ease)] hover:after:scale-x-100 ${
                   pathname === link.href
                     ? "text-primary after:scale-x-100"
@@ -98,6 +99,7 @@ export default function Navigation() {
         <div className="flex items-center gap-3 shrink-0 ml-auto">
           <Link
             href="/contact"
+            prefetch={false}
             className={buttonClassName({
               variant: "primary",
               size: "sm",
@@ -170,6 +172,7 @@ export default function Navigation() {
                   <Link
                     key={link.href}
                     href={link.href}
+                    prefetch={false}
                     onClick={closeMenu}
                     style={{ transitionDelay: `${isMenuOpen ? index * 50 : 0}ms` }}
                     className={`ui-motion rounded-2xl px-3 py-3 text-base font-semibold ${
@@ -192,6 +195,7 @@ export default function Navigation() {
                 >
                   <Link
                     href="/contact"
+                    prefetch={false}
                     onClick={closeMenu}
                     className={buttonClassName({
                       variant: "primary",

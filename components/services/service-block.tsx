@@ -115,6 +115,7 @@ export default function ServiceBlock({
         <div className="mt-8">
           <Link
             href={ctaHref}
+            prefetch={false}
             className={cn(
               buttonClassName({ variant: "primary", size: "lg" }),
               "ui-transition duration-300 transition-[transform,box-shadow,color,background-color,border-color] md:hover:shadow-[0_0_0_4px_hsl(var(--primary)/0.18),0_10px_28px_rgba(10,30,80,0.16)]"
@@ -127,4 +128,3 @@ export default function ServiceBlock({
     </div>
   );
 }
-

@@ -79,6 +79,7 @@ export default function GalleryPreview() {
         <div className="mt-10">
           <Link
             href="/completed-projects"
+            prefetch={false}
             className={buttonClassName({ variant: "outline", size: "lg" })}
           >
             View all completed projects
