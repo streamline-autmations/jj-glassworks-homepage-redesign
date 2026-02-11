@@ -22,13 +22,13 @@ const certifications = [
 
 export default function TrustCredentials() {
   return (
-    <section className="py-16 md:py-20 border-y border-border bg-secondary">
+    <section className="py-16 md:py-20 border-y border-border bg-secondary ui-reveal">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary text-center mb-10">
           Certified & Industry Recognised
         </p>
 
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-10 sm:gap-16 md:gap-24 motion-safe:animate-in motion-safe:fade-in-0 motion-safe:slide-in-from-bottom-2 motion-safe:duration-500">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-10 sm:gap-16 md:gap-24">
           {certifications.map((cert) => (
             <div key={cert.name} className="flex flex-col items-center gap-3">
               <div

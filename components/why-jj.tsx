@@ -31,13 +31,13 @@ const reasons = [
 
 export default function WhyJJ() {
   return (
-    <section className="py-20 md:py-28 bg-secondary border-y border-border">
+    <section className="py-20 md:py-28 bg-secondary border-y border-border ui-reveal">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground tracking-tight text-center">
           WHY CHOOSE JJ GLASS &amp; ALUMINIUM
         </h2>
 
-        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6 motion-safe:animate-in motion-safe:fade-in-0 motion-safe:slide-in-from-bottom-2 motion-safe:duration-500">
+        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {reasons.map((reason) => {
             const Icon = reason.icon;
             return (

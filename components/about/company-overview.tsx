@@ -1,6 +1,6 @@
 export default function CompanyOverview() {
   return (
-    <section className="py-20 md:py-28 bg-background">
+    <section className="py-20 md:py-28 bg-background ui-reveal">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-12 gap-8 md:gap-16">
           <div className="md:col-span-4">

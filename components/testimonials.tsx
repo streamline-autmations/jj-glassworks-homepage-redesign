@@ -49,7 +49,7 @@ export default function Testimonials() {
   const [current, setCurrent] = useState(0);
 
   return (
-    <section className="py-20 md:py-28 bg-background">
+    <section className="py-20 md:py-28 bg-background ui-reveal">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-16">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-3">
@@ -61,7 +61,7 @@ export default function Testimonials() {
         </div>
 
         {/* Desktop: 3-column grid */}
-        <div className="hidden md:grid md:grid-cols-3 gap-6 motion-safe:animate-in motion-safe:fade-in-0 motion-safe:slide-in-from-bottom-2 motion-safe:duration-500">
+        <div className="hidden md:grid md:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
             <TestimonialCard key={index} testimonial={testimonial} />
           ))}

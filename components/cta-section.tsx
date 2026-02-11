@@ -4,7 +4,7 @@ import { buttonClassName } from "@/components/ui/button";
 
 export default function CTASection() {
   return (
-    <section className="bg-primary py-16 md:py-20">
+    <section className="bg-primary py-16 md:py-20 ui-reveal">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-center md:text-left">

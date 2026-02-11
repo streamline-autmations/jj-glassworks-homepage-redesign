@@ -10,7 +10,7 @@ export default function Footer() {
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
     { href: "/services", label: "Services" },
-    { href: "/gallery", label: "Gallery" },
+    { href: "/completed-projects", label: "Completed Projects" },
     { href: "/contact", label: "Contact" },
   ];
 
@@ -24,11 +24,11 @@ export default function Footer() {
   ];
 
   const featuredLinks = [
-    { href: "/gallery", label: "Kiepersol" },
-    { href: "/gallery", label: "I&S Motors" },
-    { href: "/gallery", label: "Lions Pride" },
-    { href: "/gallery", label: "SHIELD" },
-    { href: "/gallery", label: "Solid Build" },
+    { href: "/completed-projects/kiepersol", label: "Kiepersol" },
+    { href: "/completed-projects/is-motors", label: "I&S Motors" },
+    { href: "/completed-projects/lions-pride", label: "Lions Pride" },
+    { href: "/completed-projects/shield-sa", label: "SHIELD SA" },
+    { href: "/completed-projects/solid-build", label: "Solid Build" },
   ];
 
   return (

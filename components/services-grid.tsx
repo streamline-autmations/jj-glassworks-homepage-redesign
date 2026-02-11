@@ -43,7 +43,7 @@ function ServiceTile({ service }: { service: Service }) {
   return (
     <Link
       href="/services"
-      className="group block overflow-hidden rounded-3xl bg-background shadow-sm ring-1 ring-border/60 transition duration-300 hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-secondary"
+      className="group block overflow-hidden rounded-3xl bg-background shadow-sm ring-1 ring-border/60 ui-motion ui-transition-shadow hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-secondary"
     >
       <div className="relative aspect-square overflow-hidden">
         <Image
@@ -51,15 +51,22 @@ function ServiceTile({ service }: { service: Service }) {
           alt={service.title}
           fill
           sizes="(min-width: 1024px) 30vw, (min-width: 768px) 44vw, 80vw"
-          className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+          className="object-cover ui-motion group-hover:scale-[1.03]"
           loading="lazy"
         />
+        <div className="absolute inset-0 bg-black/25 opacity-0 ui-transition group-hover:opacity-100" />
+        <div className="absolute inset-3 border border-white/40 opacity-0 ui-transition group-hover:opacity-100" />
+        <div className="absolute inset-x-0 bottom-0 p-5 opacity-0 translate-y-3 ui-motion group-hover:opacity-100 group-hover:translate-y-0">
+          <p className="text-xs font-extrabold tracking-[0.18em] text-white">
+            {service.title}
+          </p>
+        </div>
       </div>
       <div className="px-6 py-6 text-center">
         <h3 className="text-sm font-extrabold tracking-[0.14em] text-foreground">
           {service.title}
         </h3>
-        <span className="mt-5 inline-flex items-center justify-center rounded-full bg-primary px-7 py-3 text-xs font-extrabold tracking-[0.12em] uppercase text-primary-foreground transition-colors group-hover:bg-primary/90">
+        <span className="mt-5 inline-flex items-center justify-center rounded-full bg-primary px-7 py-3 text-xs font-extrabold tracking-[0.12em] uppercase text-primary-foreground ui-transition-colors">
           VIEW MORE
         </span>
       </div>
@@ -69,7 +76,7 @@ function ServiceTile({ service }: { service: Service }) {
 
 export default function ServicesGrid() {
   return (
-    <section className="py-20 md:py-28 bg-[hsl(var(--brand-deep))] border-y border-white/10">
+    <section className="py-20 md:py-28 bg-[hsl(var(--brand-deep))] border-y border-white/10 ui-reveal">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight text-center mb-12">
           OUR SERVICES

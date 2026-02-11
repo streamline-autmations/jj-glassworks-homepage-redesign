@@ -7,6 +7,9 @@
     --brand-deep: 226 61% 36%;
     --brand-sky: 203 68% 59%;
     --brand-blue: 208 58% 57%;
+    --ui-duration: 240ms;
+    --ui-duration-fast: 200ms;
+    --ui-ease: cubic-bezier(0.4, 0, 0.2, 1);
     --background: 0 0% 100%;
     --foreground: 226 35% 14%;
     --card: 0 0% 100%;
@@ -56,6 +59,62 @@
 }
 
 @layer utilities {
+  .ui-transition {
+    transition-duration: var(--ui-duration);
+    transition-timing-function: var(--ui-ease);
+  }
+
+  .ui-transition-fast {
+    transition-duration: var(--ui-duration-fast);
+    transition-timing-function: var(--ui-ease);
+  }
+
+  .ui-transition-colors {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-duration: var(--ui-duration);
+    transition-timing-function: var(--ui-ease);
+  }
+
+  .ui-transition-shadow {
+    transition-property: box-shadow;
+    transition-duration: var(--ui-duration);
+    transition-timing-function: var(--ui-ease);
+  }
+
+  .ui-motion {
+    transition-property: transform, opacity;
+    transition-duration: var(--ui-duration);
+    transition-timing-function: var(--ui-ease);
+    will-change: transform, opacity;
+  }
+
+  @keyframes ui-page-fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .ui-page-fade {
+    animation: ui-page-fade var(--ui-duration-fast) var(--ui-ease) both;
+  }
+
+  .ui-reveal {
+    opacity: 0;
+    transform: translate3d(0, 28px, 0);
+    transition-property: transform, opacity;
+    transition-duration: var(--ui-duration);
+    transition-timing-function: var(--ui-ease);
+    will-change: transform, opacity;
+  }
+
+  .ui-reveal.is-revealed {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
   .animate-marquee {
     animation: marquee 46s linear infinite;
     will-change: transform;
@@ -77,6 +136,15 @@
   }
 
   @media (prefers-reduced-motion: reduce) {
+    .ui-motion,
+    .ui-reveal,
+    .ui-page-fade {
+      transition: none;
+      animation: none;
+      transform: none;
+      opacity: 1;
+    }
+
     .animate-marquee {
       animation: none;
     }

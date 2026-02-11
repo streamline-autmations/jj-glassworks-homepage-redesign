@@ -27,7 +27,7 @@ export default function ClientsCredibility() {
   const marqueeLogos = [...logos, ...logos, ...logos, ...logos];
 
   return (
-    <section className="w-full bg-primary py-10 sm:py-12 md:py-14 border-y border-[hsl(0_0%_100%/0.14)]">
+    <section className="w-full bg-primary py-10 sm:py-12 md:py-14 border-y border-[hsl(0_0%_100%/0.14)] ui-reveal">
       <h2 className="px-6 text-center text-xs sm:text-sm font-extrabold tracking-[0.18em] uppercase text-white/90">
         Companies We’ve Worked With
       </h2>

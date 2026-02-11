@@ -10,7 +10,7 @@ export type TeamContact = {
 export const teamContacts: TeamContact[] = [
   {
     name: "Chris Van Zyl",
-    role: "Director",
+    role: "Operations",
     phone: "0827252559",
     phoneDisplay: "082 725 2559",
     email: "chrisvanzyl@jjglass.co.za",
@@ -18,7 +18,7 @@ export const teamContacts: TeamContact[] = [
   },
   {
     name: "Kenny Van Zyl",
-    role: "Director",
+    role: "Company Director",
     phone: "0824595073",
     phoneDisplay: "082 459 5073",
     email: "jjglass@mweb.co.za",

@@ -4,7 +4,7 @@ import { teamContacts } from "@/lib/team";
 
 export default function TeamSection() {
   return (
-    <section className="py-20 md:py-28 bg-background">
+    <section className="py-20 md:py-28 bg-background ui-reveal">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-14">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-3">
@@ -15,7 +15,7 @@ export default function TeamSection() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 motion-safe:animate-in motion-safe:fade-in-0 motion-safe:slide-in-from-bottom-2 motion-safe:duration-500">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {teamContacts.map((member) => (
             <div
               key={member.name}
@@ -26,28 +26,30 @@ export default function TeamSection() {
                   src={member.photo}
                   alt={`${member.name} - ${member.role}`}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                  className="object-cover ui-motion group-hover:scale-[1.03]"
                   loading="lazy"
                 />
+                <div className="absolute inset-0 bg-black/25 opacity-0 ui-transition group-hover:opacity-100" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220_50%_8%/0.88)] via-[hsl(220_50%_8%/0.35)] to-transparent" />
+                <div className="absolute inset-3 border border-white/40 opacity-0 ui-transition group-hover:opacity-100" />
 
-                <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
-                  <p className="text-lg sm:text-base font-bold text-white leading-tight">
+                <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5 lg:p-7 ui-motion group-hover:-translate-y-0.5">
+                  <p className="text-lg sm:text-base lg:text-xl font-bold text-white leading-tight">
                     {member.name}
                   </p>
-                  <p className="mt-1 text-sm sm:text-xs text-white/70">
+                  <p className="mt-1 text-sm sm:text-xs lg:text-base text-white/70">
                     {member.role}
                   </p>
-                  <div className="mt-3 space-y-1">
+                  <div className="mt-3 lg:mt-5 space-y-1 lg:space-y-2">
                     <a
                       href={`mailto:${member.email}`}
-                      className="block text-sm sm:text-xs text-white/85 hover:text-primary underline decoration-white/30 hover:decoration-primary/50 underline-offset-4"
+                      className="block text-sm sm:text-xs lg:text-base text-white/85 hover:text-primary underline decoration-white/30 hover:decoration-primary/50 underline-offset-4"
                     >
                       {member.email}
                     </a>
                     <a
                       href={`tel:${member.phone}`}
-                      className="block text-sm sm:text-xs text-white/85 hover:text-primary underline decoration-white/30 hover:decoration-primary/50 underline-offset-4"
+                      className="block text-sm sm:text-xs lg:text-base text-white/85 hover:text-primary underline decoration-white/30 hover:decoration-primary/50 underline-offset-4"
                     >
                       {member.phoneDisplay}
                     </a>
