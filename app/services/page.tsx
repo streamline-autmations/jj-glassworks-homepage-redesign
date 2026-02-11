@@ -255,7 +255,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="py-14 md:py-24 bg-white">
+      <section className="pt-14 pb-10 md:py-24 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-10">
             {services.map((service) => {
@@ -320,7 +320,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="py-14 md:py-24 bg-white border-t border-[#243e95]/10">
+      <section className="pt-10 pb-14 md:py-24 bg-white border-t border-[#243e95]/10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mx-auto text-center">
             <div className="w-12 h-1 bg-[#4ea6dd] mx-auto mb-6 md:mb-8" />

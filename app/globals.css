@@ -7,8 +7,8 @@
     --brand-deep: 226 61% 36%;
     --brand-sky: 203 68% 59%;
     --brand-blue: 208 58% 57%;
-    --ui-duration: 240ms;
-    --ui-duration-fast: 200ms;
+    --ui-duration: 200ms;
+    --ui-duration-fast: 180ms;
     --ui-ease: cubic-bezier(0.4, 0, 0.2, 1);
     --background: 0 0% 100%;
     --foreground: 226 35% 14%;
@@ -103,7 +103,7 @@
 
   .ui-reveal {
     opacity: 0;
-    transform: translate3d(0, 28px, 0);
+    transform: translate3d(0, 18px, 0);
     transition-property: transform, opacity;
     transition-duration: var(--ui-duration);
     transition-timing-function: var(--ui-ease);

@@ -4,7 +4,7 @@ import { teamContacts } from "@/lib/team";
 
 export default function TeamSection() {
   return (
-    <section className="py-20 md:py-28 bg-background ui-reveal">
+    <section className="pt-20 pb-12 md:py-28 bg-background ui-reveal">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-14">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-3">

@@ -164,12 +164,15 @@ export default function ScrollReveal() {
       return;
     }
 
+    const isCompactMotion = window.matchMedia("(max-width: 640px)").matches;
+
     revealElements.forEach((element) => {
       const delayMsRaw = element.getAttribute("data-reveal-delay");
       if (!delayMsRaw) return;
       const delayMs = Number(delayMsRaw);
       if (!Number.isFinite(delayMs) || delayMs <= 0) return;
-      element.style.transitionDelay = `${delayMs}ms`;
+      const normalizedDelayMs = isCompactMotion ? 0 : Math.min(160, Math.round(delayMs * 0.6));
+      element.style.transitionDelay = `${normalizedDelayMs}ms`;
     });
 
     const observer = new IntersectionObserver(
@@ -180,7 +183,7 @@ export default function ScrollReveal() {
           instance.unobserve(entry.target);
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -10% 0px" }
+      { threshold: 0.04, rootMargin: "0px 0px 12% 0px" }
     );
 
     revealElements
