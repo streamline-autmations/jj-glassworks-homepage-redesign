@@ -66,6 +66,7 @@ export default function CompletedProjectsPage() {
               <Link
                 key={project.slug}
                 href={`/completed-projects/${project.slug}`}
+                prefetch={false}
                 className="group relative overflow-hidden rounded-3xl bg-background shadow-sm ring-1 ring-border/60 ui-motion ui-transition-shadow md:hover:shadow-md"
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
@@ -105,4 +106,3 @@ export default function CompletedProjectsPage() {
     </main>
   );
 }
-

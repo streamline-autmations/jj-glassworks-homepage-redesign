@@ -54,6 +54,7 @@ export default function GalleryPreview() {
             <Link
               key={index}
               href={project.href}
+              prefetch={false}
               className="group relative aspect-[4/3] overflow-hidden block"
             >
               <Image
