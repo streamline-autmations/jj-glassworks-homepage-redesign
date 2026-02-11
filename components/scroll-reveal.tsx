@@ -6,7 +6,7 @@ import Image from "next/image";
 import { X } from "lucide-react";
 
 const BIRTHDAY_IMAGE_URL =
-  "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770819364/Happy_nfhvmb.jpg";
+  "https://res.cloudinary.com/dnlgohkcc/image/upload/v1770821523/Happy_nfhvmb.jpg";
 
 type ConfettiPiece = {
   leftPercent: number;
