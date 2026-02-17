@@ -3,14 +3,17 @@ export default function AboutSnapshot() {
     <section className="py-20 md:py-28 bg-background ui-reveal">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-          <div className="relative aspect-[16/11] md:aspect-video w-full overflow-hidden rounded-3xl bg-background shadow-sm ring-1 ring-border/60">
-            <iframe
-              src="https://iframe.mediadelivery.net/play/601665/61052645-268e-4d7a-932e-5d3874d6515e"
-              title="JJ Glassworks video"
-              allow="autoplay; fullscreen; picture-in-picture"
-              allowFullScreen
-              className="absolute inset-0 h-full w-full"
-            />
+          <div className="w-full overflow-hidden rounded-3xl bg-background shadow-sm ring-1 ring-border/60">
+            <div className="relative w-full pt-[56.25%]">
+              <iframe
+                src="https://iframe.mediadelivery.net/play/601665/61052645-268e-4d7a-932e-5d3874d6515e?responsive=true"
+                title="JJ Glassworks video"
+                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen"
+                allowFullScreen
+                className="absolute inset-0 h-full w-full"
+                style={{ border: 0 }}
+              />
+            </div>
           </div>
 
           <div className="pt-2">
