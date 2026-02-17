@@ -1,18 +1,15 @@
-import Image from "next/image";
-
 export default function AboutSnapshot() {
   return (
     <section className="py-20 md:py-28 bg-background ui-reveal">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           <div className="relative aspect-[16/11] md:aspect-video w-full overflow-hidden rounded-3xl bg-background shadow-sm ring-1 ring-border/60">
-            <Image
-              src="https://res.cloudinary.com/dnlgohkcc/image/upload/v1770740856/Untitled_20design_upscayl_8x_jd9mlb.jpg"
-              alt="JJ Glassworks workshop and installations"
-              fill
-              sizes="(min-width: 1024px) 45vw, (min-width: 768px) 50vw, 92vw"
-              className="object-cover"
-              priority
+            <iframe
+              src="https://iframe.mediadelivery.net/play/601665/61052645-268e-4d7a-932e-5d3874d6515e"
+              title="JJ Glassworks video"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 h-full w-full"
             />
           </div>
 
