@@ -51,6 +51,9 @@ function loadPlayerJs() {
 export default function AboutSnapshotVideo() {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
+  const playerRef = useRef<InstanceType<NonNullable<Window["playerjs"]>["Player"]> | null>(
+    null
+  );
   const [isReady, setIsReady] = useState(false);
 
   const src = useMemo(() => {
@@ -79,11 +82,10 @@ export default function AboutSnapshotVideo() {
         if (!window.playerjs?.Player) return;
 
         player = new window.playerjs.Player(iframeRef.current);
+        playerRef.current = player;
         player.on("ready", () => {
           if (didCancel) return;
           setIsReady(true);
-          if (player?.supports("method", "setVolume")) player.setVolume(50);
-          if (player?.supports("method", "unmute")) player.unmute();
         });
       } catch {
         if (didCancel) return;
@@ -97,17 +99,15 @@ export default function AboutSnapshotVideo() {
       try {
         player?.off("ready");
       } catch {}
+      if (playerRef.current === player) playerRef.current = null;
     };
   }, []);
 
   useEffect(() => {
     if (!isReady) return;
     const container = containerRef.current;
-    const iframe = iframeRef.current;
-    if (!container || !iframe) return;
-    if (!window.playerjs?.Player) return;
-
-    const player = new window.playerjs.Player(iframe);
+    const player = playerRef.current;
+    if (!container || !player) return;
 
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduceMotion) return;
@@ -116,23 +116,33 @@ export default function AboutSnapshotVideo() {
       (entries) => {
         const entry = entries[0];
         if (!entry) return;
-        if (entry.isIntersecting && entry.intersectionRatio >= 0.45) {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.2) {
           if (player.supports("method", "play")) player.play();
         } else {
           if (player.supports("method", "pause")) player.pause();
         }
       },
-      { threshold: [0, 0.15, 0.3, 0.45, 0.6, 0.8, 1] }
+      { threshold: [0, 0.1, 0.2, 0.35, 0.5, 0.75, 1] }
     );
 
     observer.observe(container);
-    return () => observer.disconnect();
+    const onVisibilityChange = () => {
+      if (document.visibilityState !== "visible") {
+        if (player.supports("method", "pause")) player.pause();
+      }
+    };
+    document.addEventListener("visibilitychange", onVisibilityChange);
+
+    return () => {
+      document.removeEventListener("visibilitychange", onVisibilityChange);
+      observer.disconnect();
+    };
   }, [isReady]);
 
   return (
     <div
       ref={containerRef}
-      className="relative aspect-[16/11] md:aspect-video w-full overflow-hidden rounded-3xl bg-background shadow-sm ring-1 ring-border/60"
+      className="relative aspect-video w-full overflow-hidden rounded-3xl bg-background shadow-sm ring-1 ring-border/60"
     >
       <iframe
         ref={iframeRef}
@@ -147,4 +157,3 @@ export default function AboutSnapshotVideo() {
     </div>
   );
 }
-

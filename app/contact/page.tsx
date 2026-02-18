@@ -27,14 +27,22 @@ const serviceOptions = [
   "Other",
 ];
 
+type QuoteFormData = {
+  name: string;
+  phone: string;
+  email: string;
+  services: string[];
+  message: string;
+};
+
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<QuoteFormData>({
     name: "",
     phone: "",
     email: "",
-    service: "",
+    services: [],
     message: "",
   });
 
@@ -43,7 +51,7 @@ export default function ContactPage() {
     setIsSubmitting(true);
     await new Promise((resolve) => setTimeout(resolve, 1000));
     setSubmitted(true);
-    setFormData({ name: "", phone: "", email: "", service: "", message: "" });
+    setFormData({ name: "", phone: "", email: "", services: [], message: "" });
     setIsSubmitting(false);
   };
 
@@ -165,18 +173,28 @@ export default function ContactPage() {
 
                   <div className="flex flex-col gap-2">
                     <label
-                      htmlFor="service"
+                      htmlFor="services"
                       className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground"
                     >
                       SERVICE NEEDED *
                     </label>
                     <Select
-                      id="service"
+                      id="services"
                       required
-                      value={formData.service}
-                      onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+                      multiple
+                      value={formData.services}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          services: Array.from(e.target.selectedOptions).map(
+                            (option) => option.value
+                          ),
+                        })
+                      }
                     >
-                      <option value="">Select a service</option>
+                      <option value="" disabled>
+                        Select one or more services
+                      </option>
                       {serviceOptions.map((service) => (
                         <option key={service} value={service}>
                           {service}
